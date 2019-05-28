@@ -1,0 +1,23 @@
+{
+  "name": "js-workbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "generate-md --layout mixu-bootstrap-2col --input ./src/text --output ./build/text"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endlesskwazar/node-js-workbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/endlesskwazar/node-js-workbook/issues"
+  },
+  "homepage": "https://github.com/endlesskwazar/node-js-workbook#readme",
+  "dependencies": {
+    "markdown-styles": "^3.1.10"
+  }
+}

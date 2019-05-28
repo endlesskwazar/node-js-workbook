@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ES6</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#es6">ES6</a></li>
+    <li class="sidebar-header-1"><a href="#ключові-слова-let-і-const">Ключові слова let і const</a></li>
+    <li class="sidebar-header-2"><a href="#ключове-слово-let">Ключове слово let</a></li>
+    <li class="sidebar-header-2"><a href="#ключове-слово-var">Ключове слово var</a></li>
+    <li class="sidebar-header-1"><a href="#функції-стрілки">Функції стрілки</a></li>
+    <li class="sidebar-header-1"><a href="#параметри-за-замовчуванням">Параметри за замовчуванням</a></li>
+    <li class="sidebar-header-1"><a href="#template-literals">Template Literals</a></li>
+    <li class="sidebar-header-1"><a href="#деструктуризація">Деструктуризація</a></li>
+    <li class="sidebar-header-1"><a href="#класи">Класи</a></li>
+    <li class="sidebar-header-1"><a href="#символьний-тип">Символьний тип</a></li>
+    <li class="sidebar-header-1"><a href="#promises(проміси)">Promises(Проміси)</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="es6"><a class="header-link" href="#es6"></a>ES6</h1>
+<h1 id="ключові-слова-let-і-const"><a class="header-link" href="#ключові-слова-let-і-const"></a>Ключові слова let і const</h1>
+<p>В ES5 є два способи, щоб оголосити змінні:</p>
+<ol class="list">
+<li>Використовуючи ключове слово var<pre class="hljs"><code><span class="hljs-keyword">var</span> count = <span class="hljs-number">1</span>;</code></pre></li>
+<li>Без використання ключових слів в форматі ідентифікатор = значення(при умові, що <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> не ввімкнений)<pre class="hljs"><code>count = <span class="hljs-number">1</span></code></pre></li>
+</ol>
+<p>Якщо другий спосіб - зло, так - як змінна оголошена тиким способом має глобальну область видимості, навіть якщо знаходиться всередені функцій, то перший спосіб це єдине, що залишається для оголошення змінних.</p>
+<p>Але, ключове слово var також має свої недоліки. Давайте їх розглянемо.</p>
+<ol class="list">
+<li>Область видимості, при оголошенні в циклах і умовних операторах</li>
+</ol>
+<p>Цікавою особливістю оголоішення зміних за допомогою var в циклах і умовних конструкціях є те, що ці змінні залишаються видимі після їх виконання. Наприклад розглянемо наступний код:</p>
+<pre class="hljs"><code><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;<span class="hljs-number">6</span>; i++){
+}
+
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//ReferenceError: i is not defined</span>
+
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>){
+    <span class="hljs-keyword">var</span> if_variable = <span class="hljs-number">3</span>; <span class="hljs-comment">//3</span>
+}
+
+<span class="hljs-built_in">console</span>.log(if_variable); <span class="hljs-comment">//ReferenceError: if_variable is not defined</span></code></pre><p>Змінна i, яка використовувалася для ітерації для цикла for і була оголошена в ньому ж видна за його межами. Також змінна if_variable, яка була оголошена в контексті умовного оператора також видна за його межами.</p>
+<ol start="2">
+<li>Перевизначення змінної</li>
+</ol>
+<p>Якщо змінна вже була оголошена і ми хочемо ще раз оголосити змінну з таким же самим ідентифікатором, javascript дозволить це зробити.</p>
+<pre class="hljs"><code><span class="hljs-keyword">var</span> counter = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> counter = <span class="hljs-number">2</span>;</code></pre><p>Хоча може здатися, що на цю особливість var можна було б і не звертати увагу, але сама ідея оголошення змінної із вже існуючим ідентифікатором, можливо є помилкою людини, майбутнім багом, який би хотілося дізнатися на місті, а не через процес дебага.</p>
+<ol start="3">
+<li>Існування до моменту ініціалізації</li>
+</ol>
+<h2 id="ключове-слово-let"><a class="header-link" href="#ключове-слово-let"></a>Ключове слово let</h2>
+<p>В ES6 передбачений новий спосіб для оголошення змінних через ключове слово var. <strong>Зверніть увагу</strong>, що ключове слово var також доступне і може бути використане.</p>
+<p>Синтаксис оголошення змінних через ключове слово let:</p>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> ідентифікатор = значення;
+<span class="hljs-keyword">let</span> counter = <span class="hljs-number">3</span>;</code></pre><p>У змінної оголошеної через let є чотири ключових відмінностей від var:</p>
+<ol class="list">
+<li>Область видимості змінної let - блок {}</li>
+</ol>
+<p>Якщо ми перепишимо минулий приклад, де була продемонстрована особливість оголошення змінної через var всередині циклів у умовних операторів із використанням ключового слова let, можна побачити, що let має цілком зрозумілу область видимості, а саме не видний за межами циклів і умовних операторів.</p>
+<pre class="hljs"><code><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;<span class="hljs-number">6</span>; i++){
+}
+
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//ReferenceError: i is not defined</span>
+
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>){
+    <span class="hljs-keyword">var</span> if_variable = <span class="hljs-number">3</span>; <span class="hljs-comment">//3</span>
+}
+
+<span class="hljs-built_in">console</span>.log(if_variable); <span class="hljs-comment">//ReferenceError: if_variable is not defined</span></code></pre><p><strong>Зверніть увагу</strong>, що в цьому випадку трапляється помилка і код зупиняє своє виконання.</p>
+<p>2.</p>
+<p>3.</p>
+<p>4.</p>
+<h2 id="ключове-слово-var"><a class="header-link" href="#ключове-слово-var"></a>Ключове слово var</h2>
+<h1 id="функції-стрілки"><a class="header-link" href="#функції-стрілки"></a>Функції стрілки</h1>
+<h1 id="параметри-за-замовчуванням"><a class="header-link" href="#параметри-за-замовчуванням"></a>Параметри за замовчуванням</h1>
+<h1 id="template-literals"><a class="header-link" href="#template-literals"></a>Template Literals</h1>
+<h1 id="деструктуризація"><a class="header-link" href="#деструктуризація"></a>Деструктуризація</h1>
+<h1 id="класи"><a class="header-link" href="#класи"></a>Класи</h1>
+<h1 id="символьний-тип"><a class="header-link" href="#символьний-тип"></a>Символьний тип</h1>
+<h1 id="promises(проміси)"><a class="header-link" href="#promises(проміси)"></a>Promises(Проміси)</h1>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
