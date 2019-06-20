@@ -18,7 +18,7 @@
     <li class="sidebar-header-1"><a href="#ключові-слова-let-і-const">Ключові слова let і const</a></li>
     <li class="sidebar-header-2"><a href="#ключове-слово-let">Ключове слово let</a></li>
     <li class="sidebar-header-2"><a href="#ключове-слово-const">Ключове слово const</a></li>
-    <li class="sidebar-header-1"><a href="#функції-стрілки">Функції стрілки</a></li>
+    <li class="sidebar-header-1"><a href="#функції-стрілки(arrow-functions)">Функції стрілки(Arrow functions)</a></li>
     <li class="sidebar-header-1"><a href="#параметри-за-замовчуванням">Параметри за замовчуванням</a></li>
     <li class="sidebar-header-1"><a href="#template-literals">Template Literals</a></li>
     <li class="sidebar-header-1"><a href="#деструктуризація">Деструктуризація</a></li>
@@ -46,13 +46,13 @@
 <pre class="hljs"><code><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;<span class="hljs-number">6</span>; i++){
 }
 
-<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//ReferenceError: i is not defined</span>
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//6</span>
 
 <span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>){
-    <span class="hljs-keyword">var</span> if_variable = <span class="hljs-number">3</span>; <span class="hljs-comment">//3</span>
+    <span class="hljs-keyword">var</span> if_variable = <span class="hljs-number">3</span>;
 }
 
-<span class="hljs-built_in">console</span>.log(if_variable); <span class="hljs-comment">//ReferenceError: if_variable is not defined</span></code></pre><p>Змінна i, яка використовувалася для ітерації для цикла for і була оголошена в ньому ж видна за його межами. Також змінна if_variable, яка була оголошена в контексті умовного оператора також видна за його межами.</p>
+<span class="hljs-built_in">console</span>.log(if_variable); <span class="hljs-comment">//3</span></code></pre><p>Змінна i, яка використовувалася для ітерації для цикла for і була оголошена в ньому ж видна за його межами. Також змінна if_variable, яка була оголошена в контексті умовного оператора також видна за його межами.</p>
 <ol start="2">
 <li>Перевизначення змінної</li>
 </ol>
@@ -69,6 +69,26 @@
 <ol start="4">
 <li>Класична задача &quot;Армія функцій&quot;</li>
 </ol>
+<p>Наступний код створює масив функцій-стрільців shooters. За задумом, кожен стрілець повинен виводити свій номер:</p>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeArmy</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-keyword">var</span> shooters = [];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+    <span class="hljs-keyword">var</span> shooter = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">// shooters function</span>
+      <span class="hljs-built_in">console</span>.log( i ); <span class="hljs-comment">// should output number of shooters</span>
+    };
+    shooters.push(shooter);
+  }
+
+  <span class="hljs-keyword">return</span> shooters;
+}
+
+<span class="hljs-keyword">var</span> army = makeArmy();
+
+army[<span class="hljs-number">0</span>](); <span class="hljs-comment">// shooter outputs 10, but need 0</span>
+army[<span class="hljs-number">5</span>](); <span class="hljs-comment">// shooter outputs 10...</span>
+<span class="hljs-comment">// .. all shouters outputs</span></code></pre><p>Це відбувається, тому що для всіх ітерацій циклів використовується одна змінна.</p>
 <h2 id="ключове-слово-let"><a class="header-link" href="#ключове-слово-let"></a>Ключове слово let</h2>
 <p>В ES6 передбачений новий спосіб для оголошення змінних через ключове слово var. <strong>Зверніть увагу</strong>, що ключове слово var також доступне і може бути використане.</p>
 <p>Синтаксис оголошення змінних через ключове слово let:</p>
@@ -92,8 +112,62 @@
 <p>3.</p>
 <p>4.</p>
 <h2 id="ключове-слово-const"><a class="header-link" href="#ключове-слово-const"></a>Ключове слово const</h2>
-<h1 id="функції-стрілки"><a class="header-link" href="#функції-стрілки"></a>Функції стрілки</h1>
-<h1 id="параметри-за-замовчуванням"><a class="header-link" href="#параметри-за-замовчуванням"></a>Параметри за замовчуванням</h1>
+<p>Оголошення const задає константу, тобто змінну, яку не можна змінювати:</p>
+<pre class="hljs"><code><span class="hljs-keyword">const</span> LOCALE = <span class="hljs-string">'UA'</span>;
+LOCALE = <span class="hljs-string">"EU"</span>; <span class="hljs-comment">//TypeError: Assignment to constant variable.</span></code></pre><p>В остальном объявление const полностью аналогично let.</p>
+<blockquote>
+<p>Зауважимо, що якщо в константу присвоєно об&#39;єкт, то від зміни захищена сама константа, але не властивості всередині неї:</p>
+</blockquote>
+<pre class="hljs"><code><span class="hljs-keyword">const</span> user = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"Вася"</span>
+};
+
+user.name = <span class="hljs-string">"Петя"</span>; <span class="hljs-comment">// Можна</span>
+user = <span class="hljs-number">5</span>; <span class="hljs-comment">// Буде помилка</span></code></pre><h1 id="функції-стрілки(arrow-functions)"><a class="header-link" href="#функції-стрілки(arrow-functions)"></a>Функції стрілки(Arrow functions)</h1>
+<p><strong>Вирази стрілочних функцій</strong> мають більш короткий синтаксис в порівнянні з функціональними виразами і лексично прив&#39;язані до значення this (але не прив&#39;язані до власного this, arguments, super, або new.target). Стрілочні функції завжди анонімні.</p>
+<p>Давайте розглянемо функцію вищого порядку, яка приймає іншу функцію і її викликає:</p>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params">innerFunc</span>)</span>{
+  <span class="hljs-keyword">var</span> message = <span class="hljs-string">"Hello World"</span>;
+  innerFunc(message);
+}
+
+outer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">message</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(message);
+});</code></pre><p>В якості параметра, при виклику функції outer ми передаємо анонімну функцію. Функція верхнього порядку(outer), приймає функцію і викликає її в собі.</p>
+<p>Розглянемо, як можна скоротити написання анонімної функції, при її передачі у функцію зовнішнього порядку.</p>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params">innerFunc</span>)</span>{
+  <span class="hljs-keyword">var</span> message = <span class="hljs-string">"Hello World"</span>;
+  innerFunc(message);
+}
+
+outer(<span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(message);
+});</code></pre><p>Можна побічити, що ми позбавилися від написання ключового слова function і від дужок, які визначають параметри функції.</p>
+<p>Стрілочну функцію можна присвоїти змінній. Наприклад:</p>
+<pre class="hljs"><code><span class="hljs-keyword">var</span> func1 = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(message);
+
+<span class="hljs-keyword">let</span> func2 = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(message);
+
+<span class="hljs-keyword">const</span> func3 = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(message);
+
+func1(<span class="hljs-string">'Func1'</span>); <span class="hljs-comment">//Func1</span>
+func2(<span class="hljs-string">'Func2'</span>); <span class="hljs-comment">//Func2</span>
+func3(<span class="hljs-string">'Func3'</span>); <span class="hljs-comment">//Func3</span></code></pre><p>Зверніть увагу, що після оператора стрілка(=&gt;) в прикладі відсутні фігурні дужки, їх можна опустити, якщо тіло стрілкової функції складається із одного виразу.</p>
+<p>За замовчуванням якщо в тілі стрілкової функції немає оператора return, він ставиться автоматично. Наприклад:</p>
+<pre class="hljs"><code><span class="hljs-keyword">const</span> sum = <span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a+b;
+<span class="hljs-keyword">let</span> res = sum(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(res); <span class="hljs-comment">//3</span></code></pre><p>Навідміну, від минулого прикладу, ми обернули параметри, які приймає стрілочна функція в дужки. Насправді до синтаксису написання параметрів в стрілкових функціях є деякі правила, в залежності від кількості параметрів.</p>
+<p>Правила написання параметрів стрілкових функцій:</p>
+<ol class="list">
+<li>Якщо стрілкова функція не має жодного параметра, обо має більше двох, то параметри заточуються в круглі дужки:</li>
+</ol>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> func1 = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">5</span>;
+<span class="hljs-keyword">let</span> func2 = <span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a+b;
+<span class="hljs-keyword">let</span> func3 = <span class="hljs-function">(<span class="hljs-params">a,b,c</span>) =&gt;</span> a+b+c;</code></pre><ol start="2">
+<li>Якщо стрілкова функція має один параметр, то круглі дужки можна опустити:</li>
+</ol>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> func1 = <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> a++;
+<span class="hljs-keyword">let</span> func2 = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a++;</code></pre><h1 id="параметри-за-замовчуванням"><a class="header-link" href="#параметри-за-замовчуванням"></a>Параметри за замовчуванням</h1>
 <h1 id="template-literals"><a class="header-link" href="#template-literals"></a>Template Literals</h1>
 <h1 id="деструктуризація"><a class="header-link" href="#деструктуризація"></a>Деструктуризація</h1>
 <h1 id="класи"><a class="header-link" href="#класи"></a>Класи</h1>
