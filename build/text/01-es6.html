@@ -21,9 +21,13 @@
     <li class="sidebar-header-1"><a href="#функції-стрілки(arrow-functions)">Функції стрілки(Arrow functions)</a></li>
     <li class="sidebar-header-1"><a href="#параметри-за-замовчуванням">Параметри за замовчуванням</a></li>
     <li class="sidebar-header-1"><a href="#template-literals">Template Literals</a></li>
-    <li class="sidebar-header-1"><a href="#деструктуризація">Деструктуризація</a></li>
+    <li class="sidebar-header-1"><a href="#деструктуризація(destructuring)">Деструктуризація(Destructuring)</a></li>
+    <li class="sidebar-header-2"><a href="#object-destructuring">Object Destructuring</a></li>
+    <li class="sidebar-header-2"><a href="#array-destructuring">Array Destructuring</a></li>
     <li class="sidebar-header-1"><a href="#класи">Класи</a></li>
-    <li class="sidebar-header-1"><a href="#символьний-тип">Символьний тип</a></li>
+    <li class="sidebar-header-2"><a href="#getters-&amp;-setters">Getters &amp; Setters</a></li>
+    <li class="sidebar-header-2"><a href="#статичні-властивості">Статичні властивості</a></li>
+    <li class="sidebar-header-2"><a href="#наслідування">Наслідування</a></li>
     <li class="sidebar-header-1"><a href="#promises(проміси)">Promises(Проміси)</a></li>
     <li class="sidebar-header-1"><a href="#домашнє-завдання">Домашнє завдання</a></li>
     <li class="sidebar-header-2"><a href="#варіанти">Варіанти</a></li>
@@ -35,7 +39,7 @@
 <p>В ES5 є два способи, щоб оголосити змінні:</p>
 <ol class="list">
 <li>Використовуючи ключове слово var<pre class="hljs"><code><span class="hljs-keyword">var</span> count = <span class="hljs-number">1</span>;</code></pre></li>
-<li>Без використання ключових слів в форматі ідентифікатор = значення(при умові, що <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> не ввімкнений)<pre class="hljs"><code>count = <span class="hljs-number">1</span></code></pre></li>
+<li>Без використання ключових слів в форматі ідентифікатор = значення(при умові, що <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> не ввімкнений)<pre class="hljs"><code>count = <span class="hljs-number">1</span>;</code></pre></li>
 </ol>
 <p>Якщо другий спосіб - зло, так - як змінна оголошена тиким способом має глобальну область видимості, навіть якщо знаходиться всередені функцій, то перший спосіб це єдине, що залишається для оголошення змінних.</p>
 <p>Але, ключове слово var також має свої недоліки. Давайте їх розглянемо.</p>
@@ -168,14 +172,173 @@ func3(<span class="hljs-string">'Func3'</span>); <span class="hljs-comment">//Fu
 </ol>
 <pre class="hljs"><code><span class="hljs-keyword">let</span> func1 = <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> a++;
 <span class="hljs-keyword">let</span> func2 = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a++;</code></pre><h1 id="параметри-за-замовчуванням"><a class="header-link" href="#параметри-за-замовчуванням"></a>Параметри за замовчуванням</h1>
-<h1 id="template-literals"><a class="header-link" href="#template-literals"></a>Template Literals</h1>
-<h1 id="деструктуризація"><a class="header-link" href="#деструктуризація"></a>Деструктуризація</h1>
+<p><strong>Параметри за замовчуванням</strong> дозволяють задавати формальним параметрам функції значення за замовчуванням, якщо для них не вказано значення або переданий undefined.</p>
+<p>ES5 немає такої фічі як параметри за замовчуванням. Щоб імітувати, використовувався паттерн &quot;параметри за замовчуванням&quot;. Працює він наступним чином:</p>
+<pre class="hljs"><code><span class="hljs-keyword">var</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  a = a || <span class="hljs-number">10</span>;
+  b = b || <span class="hljs-number">20</span>;
+  <span class="hljs-keyword">return</span> a + b;
+};
+sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 3</span>
+sum(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 21</span>
+sum();     <span class="hljs-comment">// 30</span></code></pre><p>Функція sum приймає два параметра a і b і повертає їх суму. Якщо параметр b не був переданий, то він автоматично стає рівним 20, якщо ж не було передано жодного параметра - a присвоюється значення 10, а b - 20. Все працює добре до тих пір, поки не з&#39;являється необхідність передати помилкове значення, наприклад, нуль:</p>
+<pre class="hljs"><code><span class="hljs-comment">// Вираз (0 || 10) поверне 10, так як 0 - хибне значення</span>
+sum(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// 11</span></code></pre><p>Для того, щоб уникнути подібних проблем, можна використати тернарний оператор:</p>
+<pre class="hljs"><code><span class="hljs-keyword">var</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  a = (a !== <span class="hljs-literal">undefined</span>) ? a : <span class="hljs-number">10</span>;
+  b = (b !== <span class="hljs-literal">undefined</span>) ? b : <span class="hljs-number">20</span>;
+  <span class="hljs-keyword">return</span> a + b;
+};</code></pre><p>З релізом ES6 з&#39;явилася можливість задавати параметри за замовчуванням при оголошенні функції:</p>
+<p>Синтаксис:</p>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> [<span class="hljs-title">name</span>](<span class="hljs-params">[param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]</span>) </span>{
+   statements
+}</code></pre><p>Приклад:</p>
+<pre class="hljs"><code><span class="hljs-keyword">var</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span></span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+};</code></pre><h1 id="template-literals"><a class="header-link" href="#template-literals"></a>Template Literals</h1>
+<p><strong>Шаблонними літералами</strong> називаються рядкові літерали, що дозволяють застосування виразів всередині. З ними ви можете використовувати багаторядкові літерали і строкову інтерполяцію. У специфікаціях до ES2015 вони називалися &quot;шаблонними рядками&quot;.</p>
+<p>Синтаксис:</p>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> str1 = <span class="hljs-string">`some text`</span>;
+<span class="hljs-keyword">let</span> str2 = <span class="hljs-string">`
+some text
+`</span>;
+
+<span class="hljs-built_in">console</span>.log(str1); <span class="hljs-comment">//some text</span>
+<span class="hljs-built_in">console</span>.log(str2); <span class="hljs-comment">//some text</span></code></pre><p>Для використання виразів всередині, використовується наступний синтаксис:</p>
+<pre class="hljs"><code><span class="hljs-string">`<span class="hljs-subst">${expression}</span>`</span></code></pre><p>Наприклад:</p>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> counter = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> terminator = <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">`
+Terminator is <span class="hljs-subst">${terminator}</span>. Counter variable is 
+<span class="hljs-subst">${counter}</span>
+`</span>;
+
+<span class="hljs-built_in">console</span>.log(str); <span class="hljs-comment">//Terminator is 0. Counter variable is 1</span></code></pre><h1 id="деструктуризація(destructuring)"><a class="header-link" href="#деструктуризація(destructuring)"></a>Деструктуризація(Destructuring)</h1>
+<p><strong>Деструктуризація</strong> просто розбиття складної структури на більш прості частини. У JavaScript ця складна структура зазвичай є об&#39;єктом або масивом. За допомогою синтаксису деструкції ви можете витягувати менші фрагменти з масивів і об&#39;єктів.</p>
+<h2 id="object-destructuring"><a class="header-link" href="#object-destructuring"></a>Object Destructuring</h2>
+<p>Рззглянемо намтупний об&#39;єкт:</p>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">'A8'</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">'Audi'</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">'V8'</span>
+};</code></pre><p>Щоь деструктуризувати цей об&#39;єкт потрібно в лівій частині присвоєння, перечислити назви властивостей які ми хочемо мати, а в правій сам об&#39;єкт деструктуризації:</p>
+<pre class="hljs"><code><span class="hljs-keyword">let</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">'A8'</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">'Audi'</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">'V8'</span>
+};
+
+<span class="hljs-keyword">const</span> {model, brand} = car;
+<span class="hljs-built_in">console</span>.log(model, brand); <span class="hljs-comment">//A8 Audi</span></code></pre><h2 id="array-destructuring"><a class="header-link" href="#array-destructuring"></a>Array Destructuring</h2>
 <h1 id="класи"><a class="header-link" href="#класи"></a>Класи</h1>
-<h1 id="символьний-тип"><a class="header-link" href="#символьний-тип"></a>Символьний тип</h1>
+<p><strong>Класи</strong> в JavaScript були введені в ECMAScript 2015 і являють собою синтаксичний цукор над існуючим в JavaScript механізмом прототипного наслідування. Синтаксис класів не вводить нову об&#39;єктно-орієнтовану модель, а надає більш простий і зрозумілий спосіб створення об&#39;єктів і організації наслідування.</p>
+<p>Синтаксис:</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> Назва [<span class="hljs-keyword">extends</span> Батьківський клас]  </span>{
+  <span class="hljs-keyword">constructor</span>
+  методи
+}</code></pre><p>Як видноі із синтаксису оголошення класу в JS, в класі можна описати конструктор і методи, оголошення властивостей не передбачено. Але властивості можна оголосити всередині конструктора або будь-якого метода(За допомогою ключового слова this). Головне, щоб цей метод відпрацював до звернення до властивості.</p>
+<p>Також не має можливості вказувати модифікатори доступу, такі як private, public, protected.</p>
+<p><strong>Приклад №1:</strong> Оголошення класа із конструктором, створення екземпляра класу.</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Starting init the kernel'</span>);
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(); <span class="hljs-comment">//starting init the kernel</span></code></pre><p><strong>Приклад №2:</strong> Оголошення класа із конструктором і методом, створення екземпляра класу і виклик методу.</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Starting init the kernel'</span>);
+  }
+
+  boot(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'boot up'</span>)
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(); <span class="hljs-comment">//starting init the kernel</span>
+kernel.boot(); <span class="hljs-comment">//boot up</span></code></pre><p><strong>Приклад №3:</strong> Оголошення класа із конструктором і методм, передача парамтра в конструктор і створення властивості, створення екземпляра класу, виклик методу і виведення значення властивості.</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(mode){
+    <span class="hljs-keyword">this</span>.mode = mode;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Starting init the kernel in mode <span class="hljs-subst">${<span class="hljs-keyword">this</span>.mode}</span>`</span>);
+  }
+
+  boot(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'boot up'</span>)
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(<span class="hljs-string">'silent'</span>); <span class="hljs-comment">//starting init the kernel in mode silent</span>
+kernel.boot(); <span class="hljs-comment">//boot up</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`mode is <span class="hljs-subst">${kernel.mode}</span>`</span>);</code></pre><p><strong>Приклад №3:</strong> Створення властивостей в методі.</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(mode){
+    <span class="hljs-keyword">this</span>.mode = mode;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Starting init the kernel in mode <span class="hljs-subst">${<span class="hljs-keyword">this</span>.mode}</span>`</span>);
+  }
+
+  boot(){
+    <span class="hljs-keyword">this</span>.bootStatus = <span class="hljs-string">'ok'</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'boot up'</span>)
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(<span class="hljs-string">'silent'</span>); <span class="hljs-comment">//starting init the kernel in mode silent</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`boot status is <span class="hljs-subst">${kernel.bootStatus}</span>`</span>);<span class="hljs-comment">//undefined</span>
+kernel.boot(); <span class="hljs-comment">//boot up</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`mode is <span class="hljs-subst">${kernel.mode}</span>`</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`boot status is <span class="hljs-subst">${kernel.bootStatus}</span>`</span>); <span class="hljs-comment">//boot status is ok</span></code></pre><h2 id="getters-&-setters"><a class="header-link" href="#getters-&-setters"></a>Getters &amp; Setters</h2>
+<p>У класах, як і в звичайних об&#39;єктах, можна оголошувати геттери і сеттери через get / set, а також використовувати [...] для властивостей з обчислювальними іменами.</p>
+<p><strong>Приклад №3:</strong> Створення геттера і сеттера.</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> </span>{
+  <span class="hljs-keyword">constructor</span>(firstName, lastName){
+    <span class="hljs-keyword">this</span>.firstName = firstName;
+    <span class="hljs-keyword">this</span>.lastName = lastName;
+  }
+
+  get fullName(){
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">' '</span> + <span class="hljs-keyword">this</span>.lastName;
+  }
+
+  set fullName(val) {
+    [<span class="hljs-keyword">this</span>.firstName, <span class="hljs-keyword">this</span>.lastName] = val.split(<span class="hljs-string">' '</span>);
+  }
+}
+
+<span class="hljs-keyword">let</span> empl = <span class="hljs-keyword">new</span> Employee(<span class="hljs-string">'Вася'</span>, <span class="hljs-string">'Пупкін'</span>);
+<span class="hljs-built_in">console</span>.log(empl.fullName); <span class="hljs-comment">//Вася Пупкін</span>
+empl.fullName = <span class="hljs-string">'Іван Іванов'</span>;
+<span class="hljs-built_in">console</span>.log(empl.fullName); <span class="hljs-comment">//Іван Іванов</span></code></pre><p>Зверніть увагу, що після ініціалізації об&#39;єкта до методів, які оголошені із використанням геттерів і сеттерів використовується синтаксис властивостей, а не виклику методів.</p>
+<p><strong>Приклад №3:</strong> Динамічно обчислювані імена методів.</p>
+<pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Obj</span> </span>{
+  <span class="hljs-keyword">constructor</span>(method){
+    <span class="hljs-keyword">this</span>.method = method;
+  }
+
+  [<span class="hljs-string">"hi"</span>.toUpperCase()]() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'it works'</span>);
+  }
+}
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> Obj(<span class="hljs-string">'hi'</span>);
+obj.HI();</code></pre><h2 id="статичні-властивості"><a class="header-link" href="#статичні-властивості"></a>Статичні властивості</h2>
+<h2 id="наслідування"><a class="header-link" href="#наслідування"></a>Наслідування</h2>
 <h1 id="promises(проміси)"><a class="header-link" href="#promises(проміси)"></a>Promises(Проміси)</h1>
 <h1 id="домашнє-завдання"><a class="header-link" href="#домашнє-завдання"></a>Домашнє завдання</h1>
+<p>Відкрийте <a href="https://repl.it/languages/nodejs">repl.it</a>.</p>
 <h2 id="варіанти"><a class="header-link" href="#варіанти"></a>Варіанти</h2>
 <h1 id="контрольні-запитання"><a class="header-link" href="#контрольні-запитання"></a>Контрольні запитання</h1>
+<ol class="list">
+<li>Поясніть модель версіонування JavaScript.</li>
+<li>Яка різниця між var і let?</li>
+<li>Що таке Arrow Function? Яка перевага Arrow Function над традиційною функцією JavaScript?</li>
+<li>Поясніть шаблонні літерали.</li>
+<li>Поясніть деструктуризацію об&#39;єктів і масивів в JavaScript?</li>
+<li>Поясніть принцип створення класів за допомогою ключового слова class.</li>
+<li>Що таке проміси(Promises)?</li>
+</ol>
       </div>
     </div>
   </div>
