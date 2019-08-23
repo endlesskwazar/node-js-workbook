@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "generate-md --layout mixu-bootstrap-2col --input ./src/text --output ./build/text"
+    "build": "npx gulp"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/endlesskwazar/node-js-workbook#readme",
   "dependencies": {
-    "markdown-styles": "^3.1.10"
+    "gulp": "^4.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-md-to-html": "^1.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-markdown-html-presentation": "0.0.2"
   }
 }

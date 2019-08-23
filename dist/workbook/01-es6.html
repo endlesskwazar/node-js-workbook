@@ -1,0 +1,1154 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans"><head>
+<meta charset="utf-8">
+<style type="text/css">
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body {
+    min-width: 980px;
+    font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    /* color: #333; */
+    background-color: #fff;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+td,th {
+    padding: 0
+}
+summary {
+    margin-bottom: 10px;
+}
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto
+}
+.container:before {
+    display: table;
+    content: ""
+}
+.container:after {
+    display: table;
+    clear: both;
+    content: ""
+}
+.boxed-group {
+    position: relative;
+    border-radius: 3px;
+    margin-bottom: 30px
+}
+#readme .markdown-body, #readme .plain {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 30px;
+    word-wrap: break-word;
+}
+#readme .plain pre {
+    font-size: 15px;
+    white-space: pre-wrap
+}
+.repository-with-sidebar:before {
+    display: table;
+    content: ""
+}
+.repository-with-sidebar:after {
+    display: table;
+    clear: both;
+    content: ""
+}
+.repository-with-sidebar .repository-sidebar {
+    float: right;
+    width: 38px
+}
+.repository-with-sidebar .repository-sidebar .sidebar-button {
+    width: 100%;
+    margin: 0 0 10px;
+    text-align: center
+}
+.repository-with-sidebar .repository-sidebar h3 {
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: normal;
+    color: #999
+}
+.repository-with-sidebar .repository-sidebar .clone-url {
+    display: none;
+    margin-top: -5px
+}
+.repository-with-sidebar .repository-sidebar .clone-url.open {
+    display: block
+}
+.repository-with-sidebar .repository-sidebar .clone-options {
+    margin: 8px 0 15px;
+    font-size: 11px;
+    color: #666
+}
+.repository-with-sidebar .repository-sidebar .clone-options .octicon-question {
+    position: relative;
+    bottom: 1px;
+    font-size: 11px;
+    color: #000;
+    cursor: pointer
+}
+.repository-with-sidebar .repository-content {
+    /* float: left; */
+    width: 920px;
+}
+.repository-with-sidebar.with-full-navigation .repository-content {
+    width: 790px;
+}
+.repository-with-sidebar.with-full-navigation .repository-sidebar {
+    width: 170px
+}
+.repository-with-sidebar.with-full-navigation .sunken-menu-group .tooltipped:before, .repository-with-sidebar.with-full-navigation .sunken-menu-group .tooltipped:after {
+    display: none
+}
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+.markdown-body a {
+  background: transparent;
+}
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+.markdown-body strong {
+  font-weight: bold;
+}
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.markdown-body img {
+  border: 0;
+}
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+.markdown-body pre {
+  overflow: auto;
+}
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+.markdown-body input {
+  line-height: normal;
+}
+.markdown-body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+.markdown-body h1 {
+  font-size: 30px;
+}
+.markdown-body h2 {
+  font-size: 21px;
+}
+.markdown-body h3 {
+  font-size: 16px;
+}
+.markdown-body h4 {
+  font-size: 14px;
+}
+.markdown-body h5 {
+  font-size: 12px;
+}
+.markdown-body h6 {
+  font-size: 11px;
+}
+.markdown-body blockquote {
+  margin: 0;
+}
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+.markdown-body dd {
+  margin-left: 0;
+}
+.markdown-body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+.markdown-body .anchor:focus {
+  outline: none;
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+.markdown-body h5 {
+  font-size: 1em;
+}
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-body li>p {
+  margin-top: 16px;
+}
+.markdown-body dl {
+  padding: 0;
+}
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-body table th {
+  font-weight: bold;
+}
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-body pre {
+  word-wrap: normal;
+}
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+.markdown-body .pl-c {
+  color: #969896;
+}
+.markdown-body .pl-c1,
+.markdown-body .pl-mdh,
+.markdown-body .pl-mm,
+.markdown-body .pl-mp,
+.markdown-body .pl-mr,
+.markdown-body .pl-s1 .pl-v,
+.markdown-body .pl-s3,
+.markdown-body .pl-sc,
+.markdown-body .pl-sv {
+  color: #0086b3;
+}
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+.markdown-body .pl-s1 .pl-s2,
+.markdown-body .pl-smi,
+.markdown-body .pl-smp,
+.markdown-body .pl-stj,
+.markdown-body .pl-vo,
+.markdown-body .pl-vpf {
+  color: #333;
+}
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+.markdown-body .pl-k,
+.markdown-body .pl-s,
+.markdown-body .pl-st {
+  color: #a71d5d;
+}
+.markdown-body .pl-pds,
+.markdown-body .pl-s1,
+.markdown-body .pl-s1 .pl-pse .pl-s2,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-src,
+.markdown-body .pl-v {
+  color: #df5000;
+}
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+.markdown-body .pl-mq {
+  color: #008080;
+}
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+.markdown-body .pl-md,
+.markdown-body .pl-mdhf {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+.markdown-body .pl-mdht,
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #000;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+}
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+.markdown-body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4183c4;
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+</head>
+<body>
+  <div id="readme" class="container"><article class="markdown-body"><h1 id="%D0%B7%D0%BC%D1%96%D1%81%D1%82"><a class="header-anchor" href="#%D0%B7%D0%BC%D1%96%D1%81%D1%82" aria-hidden="true">&#xA7;</a> &#x417;&#x43C;&#x456;&#x441;&#x442;</h1>
+<nav class="table-of-contents"><ol><li><a href="#%D0%B7%D0%BC%D1%96%D1%81%D1%82"> &#x417;&#x43C;&#x456;&#x441;&#x442;</a></li><li><a href="#es6"> ES6</a></li><li><a href="#%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D1%96-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0-let-%D1%96-const"> &#x41A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x456; &#x441;&#x43B;&#x43E;&#x432;&#x430; let &#x456; const</a><ol><li><a href="#%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-let"> &#x41A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; let</a></li><li><a href="#%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-const"> &#x41A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; const</a></li></ol></li><li><a href="#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D1%81%D1%82%D1%80%D1%96%D0%BB%D0%BA%D0%B8(arrow-functions)"> &#x424;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x438;(Arrow functions)</a></li><li><a href="#%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8-%D0%B7%D0%B0-%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D1%87%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC"> &#x41F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;</a></li><li><a href="#template-literals"> Template Literals</a></li><li><a href="#%D0%B4%D0%B5%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F(destructuring)"> &#x414;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F;(Destructuring)</a><ol><li><a href="#object-destructuring"> Object Destructuring</a><ol><li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%96%D0%B4%D0%BC%D1%96%D0%BD%D0%BD%D0%B8%D1%85-%D1%96%D0%B4%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D1%96%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2-%D0%B2%D1%96%D0%B4-%D0%BA%D0%BB%D1%8E%D1%87%D1%96%D0%B2"> &#x412;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x432;&#x456;&#x434;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x456;&#x432; &#x432;&#x456;&#x434; &#x43A;&#x43B;&#x44E;&#x447;&#x456;&#x432;</a></li><li><a href="#%D0%B4%D0%B8%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F-%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%85-%D0%BE%D0%B1&apos;%D1%94%D0%BA%D1%82%D1%96%D0%B2"> &#x414;&#x438;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x435;&#x43D;&#x438;&#x445; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;</a></li></ol></li><li><a href="#array-destructuring"> Array Destructuring</a><ol><li><a href="#%D0%BF%D1%80%D0%BE%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B7%D0%BC%D1%96%D0%BD%D0%B8%D1%85"> &#x41F;&#x440;&#x43E;&#x43F;&#x443;&#x449;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x438;&#x445;</a></li><li><a href="#spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80"> Spread - &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;</a><ol><li><a href="#%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81"> &#x412;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;</a></li><li><a href="#%D0%B4%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%96%D0%B2-%D0%B2-%D0%BA%D1%96%D0%BD%D0%B5%D1%86%D1%8C-%D1%96-%D0%BF%D0%BE%D1%87%D0%B0%D1%82%D0%BE%D0%BA-%D0%BC%D0%B0%D1%81%D0%B8%D0%B2%D1%83%2C-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D1%8E%D1%87%D0%B8-spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80"> &#x414;&#x43E;&#x434;&#x430;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x456;&#x432; &#x432; &#x43A;&#x456;&#x43D;&#x435;&#x446;&#x44C; &#x456; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43E;&#x43A; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443;, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; spread - &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;</a></li><li><a href="#rest---param%2C-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D1%8E%D1%87%D0%B8-spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80"> Rest - param, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; spread - &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;</a></li></ol></li></ol></li></ol></li><li><a href="#%D0%BA%D0%BB%D0%B0%D1%81%D0%B8"> &#x41A;&#x43B;&#x430;&#x441;&#x438;</a><ol><li><a href="#getters-%26-setters"> Getters &amp; Setters</a></li><li><a href="#%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96-%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8"> &#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;</a><ol><li><a href="#%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96"> &#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;</a></li><li><a href="#%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8"> &#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;</a></li></ol></li><li><a href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F"> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;</a></li><li><a href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D0%BA%D0%B0"> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x442;&#x430;&#x442;&#x438;&#x43A;&#x430;</a><ol><li><a href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96"> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;</a></li><li><a href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8"> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;</a></li></ol></li></ol></li><li><a href="#%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%94-%D0%B7%D0%B0%D0%B2%D0%B4%D0%B0%D0%BD%D0%BD%D1%8F"> &#x414;&#x43E;&#x43C;&#x430;&#x448;&#x43D;&#x454; &#x437;&#x430;&#x432;&#x434;&#x430;&#x43D;&#x43D;&#x44F;</a><ol><li><a href="#%D0%B2%D0%B0%D1%80%D1%96%D0%B0%D0%BD%D1%82%D0%B8"> &#x412;&#x430;&#x440;&#x456;&#x430;&#x43D;&#x442;&#x438;</a></li></ol></li><li><a href="#%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%96-%D0%B7%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F"> &#x41A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44C;&#x43D;&#x456; &#x437;&#x430;&#x43F;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x44F;</a></li></ol></nav><h1 id="es6"><a class="header-anchor" href="#es6" aria-hidden="true">&#xA7;</a> ES6</h1>
+<p>JavaScript &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x432;&#x430;&#x432;&#x441;&#x44F; &#x44F;&#x43A; &#x441;&#x43A;&#x440;&#x438;&#x43F;&#x442;&#x43E;&#x432;&#x430; &#x43C;&#x43E;&#x432;&#x430; &#x434;&#x43B;&#x44F; Netscape. &#x41F;&#x456;&#x441;&#x43B;&#x44F; &#x447;&#x43E;&#x433;&#x43E; &#x432;&#x456;&#x43D; &#x431;&#x443;&#x432; &#x432;&#x456;&#x434;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x439; &#x432; ECMA International &#x434;&#x43B;&#x44F; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457; (ECMA - &#x446;&#x435; &#x430;&#x441;&#x43E;&#x446;&#x456;&#x430;&#x446;&#x456;&#x44F;, &#x434;&#x456;&#x44F;&#x43B;&#x44C;&#x43D;&#x456;&#x441;&#x442;&#x44C; &#x44F;&#x43A;&#x43E;&#x457; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x44F;&#x447;&#x435;&#x43D;&#x430; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457; &#x456;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x456;&#x439;&#x43D;&#x438;&#x445; &#x456; &#x43A;&#x43E;&#x43C;&#x443;&#x43D;&#x456;&#x43A;&#x430;&#x446;&#x456;&#x439;&#x43D;&#x438;&#x445; &#x442;&#x435;&#x445;&#x43D;&#x43E;&#x43B;&#x43E;&#x433;&#x456;&#x439;). &#x426;&#x435; &#x43F;&#x440;&#x438;&#x437;&#x432;&#x435;&#x43B;&#x43E; &#x434;&#x43E; &#x43F;&#x43E;&#x44F;&#x432;&#x438; &#x43D;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x443;, &#x432;&#x456;&#x434;&#x43E;&#x43C;&#x43E;&#x433;&#x43E; &#x44F;&#x43A; ECMAScript.</p>
+<p>&#x41F;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x448;&#x456; &#x432;&#x435;&#x440;&#x441;&#x456;&#x457; JavaScript &#x432;&#x436;&#x435; &#x431;&#x443;&#x43B;&#x438; &#x437;&#x430;&#x441;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x456; &#x43D;&#x430; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x456; ECMAScript. &#x41F;&#x440;&#x43E;&#x441;&#x442;&#x456;&#x448;&#x435; &#x43A;&#x430;&#x436;&#x443;&#x447;&#x438;, ECMAScript - &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;, &#x430; JavaScript - &#x43D;&#x430;&#x439;&#x43F;&#x43E;&#x43F;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x456;&#x448;&#x430; &#x440;&#x435;&#x430;&#x43B;&#x456;&#x437;&#x430;&#x446;&#x456;&#x44F; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x443;.</p>
+<p>ES - &#x446;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x441;&#x43A;&#x43E;&#x440;&#x43E;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x434;&#x43B;&#x44F; ECMAScript. &#x41A;&#x43E;&#x436;&#x43D;&#x435; &#x432;&#x438;&#x434;&#x430;&#x43D;&#x43D;&#x44F; ECMAScript &#x43E;&#x442;&#x440;&#x438;&#x43C;&#x443;&#x454; &#x430;&#x431;&#x440;&#x435;&#x432;&#x456;&#x430;&#x442;&#x443;&#x440;&#x443; ES &#x437; &#x43F;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x448;&#x438;&#x43C; &#x439;&#x43E;&#x433;&#x43E; &#x43D;&#x43E;&#x43C;&#x435;&#x440;&#x43E;&#x43C;. &#x412;&#x441;&#x44C;&#x43E;&#x433;&#x43E; &#x456;&#x441;&#x43D;&#x443;&#x454; 8 &#x432;&#x435;&#x440;&#x441;&#x456;&#x439; ECMAScript. ES1 &#x431;&#x443;&#x43B;&#x430; &#x432;&#x438;&#x43F;&#x443;&#x449;&#x435;&#x43D;&#x430; &#x432; &#x447;&#x435;&#x440;&#x432;&#x43D;&#x456; 1997 &#x440;&#x43E;&#x43A;&#x443;, ES2 - &#x432; &#x447;&#x435;&#x440;&#x432;&#x43D;&#x456; 1998 &#x440;&#x43E;&#x43A;&#x443;, ES3 - &#x432; &#x433;&#x440;&#x443;&#x434;&#x43D;&#x456; 1999 &#x440;&#x43E;&#x43A;&#x443;, &#x430; &#x432;&#x435;&#x440;&#x441;&#x456;&#x44F; ES4 - &#x442;&#x430;&#x43A; &#x456; &#x43D;&#x435; &#x431;&#x443;&#x43B;&#x430; &#x43F;&#x440;&#x438;&#x439;&#x43D;&#x44F;&#x442;&#x430;. ES5 &#x431;&#x443;&#x432; &#x432;&#x438;&#x43F;&#x443;&#x449;&#x435;&#x43D;&#x438;&#x439; &#x432; &#x433;&#x440;&#x443;&#x434;&#x43D;&#x456; 2009 &#x440;&#x43E;&#x43A;&#x443;, &#x447;&#x435;&#x440;&#x435;&#x437; 10 &#x440;&#x43E;&#x43A;&#x456;&#x432; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x432;&#x438;&#x445;&#x43E;&#x434;&#x443; &#x442;&#x440;&#x435;&#x442;&#x44C;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x434;&#x430;&#x43D;&#x43D;&#x44F;.</p>
+<p>&#x412;&#x435;&#x440;&#x441;&#x456;&#x44F; ES6 / ES2015 &#x432;&#x438;&#x439;&#x448;&#x43B;&#x430; &#x432; &#x447;&#x435;&#x440;&#x432;&#x43D;&#x456; 2015 &#x440;&#x43E;&#x43A;&#x443;. &#x426;&#x435; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43F;&#x440;&#x438;&#x43D;&#x435;&#x441;&#x43B;&#x43E; &#x44F;&#x43A;&#x443;&#x441;&#x44C; &#x43F;&#x43B;&#x443;&#x442;&#x430;&#x43D;&#x438;&#x43D;&#x443; &#x432; &#x437;&#x432;&apos;&#x44F;&#x437;&#x43A;&#x443; &#x437; &#x43D;&#x430;&#x437;&#x432;&#x43E;&#x44E; &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x430;, &#x430;&#x434;&#x436;&#x435; ES6 &#x456; ES2015 - &#x446;&#x435; &#x43E;&#x434;&#x43D;&#x435; &#x456; &#x442;&#x435; &#x436;. &#x417; &#x432;&#x438;&#x445;&#x43E;&#x434;&#x43E;&#x43C; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43F;&#x430;&#x43A;&#x435;&#x442;&#x443; &#x43E;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x44C; &#x43A;&#x43E;&#x43C;&#x456;&#x442;&#x435;&#x442; &#x43F;&#x440;&#x438;&#x439;&#x43D;&#x44F;&#x432; &#x440;&#x456;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x442;&#x438; &#x434;&#x43E; &#x449;&#x43E;&#x440;&#x456;&#x447;&#x43D;&#x438;&#x445; &#x43E;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x44C;. &#x422;&#x43E;&#x43C;&#x443; &#x432;&#x438;&#x434;&#x430;&#x43D;&#x43D;&#x44F; &#x431;&#x443;&#x43B;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x439;&#x43C;&#x435;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x43E; &#x432; ES2015, &#x449;&#x43E;&#x431; &#x432;&#x456;&#x434;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x430;&#x442;&#x438; &#x440;&#x456;&#x43A; &#x440;&#x435;&#x43B;&#x456;&#x437;&#x443;. &#x41F;&#x43E;&#x434;&#x430;&#x43B;&#x44C;&#x448;&#x456; &#x432;&#x435;&#x440;&#x441;&#x456;&#x457; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x432;&#x456;&#x434;&#x43F;&#x43E;&#x432;&#x456;&#x434;&#x43D;&#x43E; &#x434;&#x43E; &#x440;&#x43E;&#x43A;&#x443; &#x457;&#x445; &#x432;&#x438;&#x43F;&#x443;&#x441;&#x43A;&#x443;. ES2016 (ES7) &#x432;&#x438;&#x439;&#x448;&#x43B;&#x430; &#x432; &#x447;&#x435;&#x440;&#x432;&#x43D;&#x456; 2016 &#x440;&#x43E;&#x43A;&#x443;.</p>
+<h1 id="%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D1%96-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0-let-%D1%96-const"><a class="header-anchor" href="#%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D1%96-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0-let-%D1%96-const" aria-hidden="true">&#xA7;</a> &#x41A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x456; &#x441;&#x43B;&#x43E;&#x432;&#x430; let &#x456; const</h1>
+<p>&#x412; ES5 &#x454; &#x434;&#x432;&#x430; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x438;, &#x449;&#x43E;&#x431; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x442;&#x438; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;:</p>
+<ol>
+<li>&#x412;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; var</li>
+</ol>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> count = <span class="hljs-number">1</span>;
+</code></pre>
+<ol start="2">
+<li>&#x411;&#x435;&#x437; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x438;&#x445; &#x441;&#x43B;&#x456;&#x432; &#x432; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x456; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; = &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;(&#x43F;&#x440;&#x438; &#x443;&#x43C;&#x43E;&#x432;&#x456;, &#x449;&#x43E; <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> &#x43D;&#x435; &#x432;&#x432;&#x456;&#x43C;&#x43A;&#x43D;&#x435;&#x43D;&#x438;&#x439;)</li>
+</ol>
+<pre><code class="language-js">count = <span class="hljs-number">1</span>;
+</code></pre>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x434;&#x440;&#x443;&#x433;&#x438;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x456;&#x431; - &#x437;&#x43B;&#x43E;, &#x442;&#x430;&#x43A; - &#x44F;&#x43A; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x430; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x430; &#x442;&#x438;&#x43A;&#x438;&#x43C; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x43E;&#x43C; &#x43C;&#x430;&#x454; &#x433;&#x43B;&#x43E;&#x431;&#x430;&#x43B;&#x44C;&#x43D;&#x443; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x456;, &#x43D;&#x430;&#x432;&#x456;&#x442;&#x44C; &#x44F;&#x43A;&#x449;&#x43E; &#x437;&#x43D;&#x430;&#x445;&#x43E;&#x434;&#x438;&#x442;&#x44C;&#x441;&#x44F; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x435;&#x43D;&#x456; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x439;, &#x442;&#x43E; &#x43F;&#x435;&#x440;&#x448;&#x438;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x456;&#x431; &#x446;&#x435; &#x454;&#x434;&#x438;&#x43D;&#x435;, &#x449;&#x43E; &#x437;&#x430;&#x43B;&#x438;&#x448;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x434;&#x43B;&#x44F; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445;.</p>
+<p>&#x410;&#x43B;&#x435;, &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; var &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43C;&#x430;&#x454; &#x441;&#x432;&#x43E;&#x457; &#x43D;&#x435;&#x434;&#x43E;&#x43B;&#x456;&#x43A;&#x438;. &#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x457;&#x445; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E;.</p>
+<ol>
+<li>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x456;, &#x43F;&#x440;&#x438; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x456; &#x432; &#x446;&#x438;&#x43A;&#x43B;&#x430;&#x445; &#x456; &#x443;&#x43C;&#x43E;&#x432;&#x43D;&#x438;&#x445; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430;&#x445;</li>
+</ol>
+<p>&#x426;&#x456;&#x43A;&#x430;&#x432;&#x43E;&#x44E; &#x43E;&#x441;&#x43E;&#x431;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44E; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x456;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x438;&#x445; &#x437;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; var &#x432; &#x446;&#x438;&#x43A;&#x43B;&#x430;&#x445; &#x456; &#x443;&#x43C;&#x43E;&#x432;&#x43D;&#x438;&#x445; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x456;&#x44F;&#x445; &#x454; &#x442;&#x435;, &#x449;&#x43E; &#x446;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456; &#x437;&#x430;&#x43B;&#x438;&#x448;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x456; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x457;&#x445; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x43D;&#x43D;&#x44F;. &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x439; &#x43A;&#x43E;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;<span class="hljs-number">6</span>; i++){
+}
+
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//6</span>
+
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>){
+	<span class="hljs-keyword">var</span> if_variable = <span class="hljs-number">3</span>;
+}
+
+<span class="hljs-built_in">console</span>.log(if_variable); <span class="hljs-comment">//3</span>
+</code></pre>
+<p>&#x417;&#x43C;&#x456;&#x43D;&#x43D;&#x430; i, &#x44F;&#x43A;&#x430; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x43B;&#x430;&#x441;&#x44F; &#x434;&#x43B;&#x44F; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x457; &#x434;&#x43B;&#x44F; &#x446;&#x438;&#x43A;&#x43B;&#x430; for &#x456; &#x431;&#x443;&#x43B;&#x430; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x430; &#x432; &#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x436; &#x432;&#x438;&#x434;&#x43D;&#x430; &#x437;&#x430; &#x439;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x436;&#x430;&#x43C;&#x438;. &#x422;&#x430;&#x43A;&#x43E;&#x436; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x430; if_variable, &#x44F;&#x43A;&#x430; &#x431;&#x443;&#x43B;&#x430; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x430; &#x432; &#x43A;&#x43E;&#x43D;&#x442;&#x435;&#x43A;&#x441;&#x442;&#x456; &#x443;&#x43C;&#x43E;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x432;&#x438;&#x434;&#x43D;&#x430; &#x437;&#x430; &#x439;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x436;&#x430;&#x43C;&#x438;.</p>
+<ol start="2">
+<li>&#x41F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457;</li>
+</ol>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x430; &#x432;&#x436;&#x435; &#x431;&#x443;&#x43B;&#x430; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x430; &#x456; &#x43C;&#x438; &#x445;&#x43E;&#x447;&#x435;&#x43C;&#x43E; &#x449;&#x435; &#x440;&#x430;&#x437; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x442;&#x438; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443; &#x437; &#x442;&#x430;&#x43A;&#x438;&#x43C; &#x436;&#x435; &#x441;&#x430;&#x43C;&#x438;&#x43C; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x43E;&#x43C;, javascript &#x434;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x438;&#x442;&#x44C; &#x446;&#x435; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438;.</p>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> counter = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> counter = <span class="hljs-number">2</span>;
+</code></pre>
+<p>&#x425;&#x43E;&#x447;&#x430; &#x43C;&#x43E;&#x436;&#x435; &#x437;&#x434;&#x430;&#x442;&#x438;&#x441;&#x44F;, &#x449;&#x43E; &#x43D;&#x430; &#x446;&#x44E; &#x43E;&#x441;&#x43E;&#x431;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; var &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x431;&#x443;&#x43B;&#x43E; &#x431; &#x456; &#x43D;&#x435; &#x437;&#x432;&#x435;&#x440;&#x442;&#x430;&#x442;&#x438; &#x443;&#x432;&#x430;&#x433;&#x443;, &#x430;&#x43B;&#x435; &#x441;&#x430;&#x43C;&#x430; &#x456;&#x434;&#x435;&#x44F; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x456;&#x437; &#x432;&#x436;&#x435; &#x456;&#x441;&#x43D;&#x443;&#x44E;&#x447;&#x438;&#x43C; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x43E;&#x43C;, &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x43E; &#x454; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x43E;&#x44E; &#x43B;&#x44E;&#x434;&#x438;&#x43D;&#x438;, &#x43C;&#x430;&#x439;&#x431;&#x443;&#x442;&#x43D;&#x456;&#x43C; &#x431;&#x430;&#x433;&#x43E;&#x43C;, &#x44F;&#x43A;&#x438;&#x439; &#x431;&#x438; &#x445;&#x43E;&#x442;&#x456;&#x43B;&#x43E;&#x441;&#x44F; &#x434;&#x456;&#x437;&#x43D;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x43D;&#x430; &#x43C;&#x456;&#x441;&#x442;&#x456;, &#x430; &#x43D;&#x435; &#x447;&#x435;&#x440;&#x435;&#x437; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x441; &#x434;&#x435;&#x431;&#x430;&#x433;&#x430;.</p>
+<ol start="3">
+<li>&#x406;&#x441;&#x43D;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x434;&#x43E; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442;&#x443; &#x456;&#x43D;&#x456;&#x446;&#x456;&#x430;&#x43B;&#x456;&#x437;&#x430;&#x446;&#x456;&#x457;</li>
+</ol>
+<p>&#x41D;&#x430;&#x441;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x430;, &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x430; &#x447;&#x435;&#x440;&#x435;&#x437; var &#x432;&#x436;&#x435; &#x456;&#x441;&#x43D;&#x443;&#x454;, &#x430;&#x43B;&#x435; &#x457;&#x457; &#x432;&#x43C;&#x456;&#x441;&#x442; &#x43D;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439;. &#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x439; &#x43A;&#x43E;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">//undefined</span>
+
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">3</span>;
+</code></pre>
+<p>&#x417;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43E;&#x457; undefined, &#x449;&#x43E; &#x43E;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454;, &#x449;&#x43E; &#x457;&#x457; &#x432;&#x43C;&#x456;&#x441;&#x442; &#x43D;&#x435; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439;.</p>
+<ol start="4">
+<li>&#x41A;&#x43B;&#x430;&#x441;&#x438;&#x447;&#x43D;&#x430; &#x437;&#x430;&#x434;&#x430;&#x447;&#x430; &quot;&#x410;&#x440;&#x43C;&#x456;&#x44F; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x439;&quot;</li>
+</ol>
+<p>&#x41D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x439; &#x43A;&#x43E;&#x434; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x454; &#x43C;&#x430;&#x441;&#x438;&#x432; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x439;-&#x441;&#x442;&#x440;&#x456;&#x43B;&#x44C;&#x446;&#x456;&#x432; shooters. &#x417;&#x430; &#x437;&#x430;&#x434;&#x443;&#x43C;&#x43E;&#x43C;, &#x43A;&#x43E;&#x436;&#x435;&#x43D; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x435;&#x446;&#x44C; &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x435;&#x43D; &#x432;&#x438;&#x432;&#x43E;&#x434;&#x438;&#x442;&#x438; &#x441;&#x432;&#x456;&#x439; &#x43D;&#x43E;&#x43C;&#x435;&#x440;:</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeArmy</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-keyword">var</span> shooters = [];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+    <span class="hljs-keyword">var</span> shooter = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">// shooters function</span>
+      <span class="hljs-built_in">console</span>.log( i ); <span class="hljs-comment">// should output number of shooters</span>
+    };
+    shooters.push(shooter);
+  }
+
+  <span class="hljs-keyword">return</span> shooters;
+}
+
+<span class="hljs-keyword">var</span> army = makeArmy();
+
+army[<span class="hljs-number">0</span>](); <span class="hljs-comment">// shooter outputs 10, but need 0</span>
+army[<span class="hljs-number">5</span>](); <span class="hljs-comment">// shooter outputs 10...</span>
+<span class="hljs-comment">// .. all shouters outputs</span>
+</code></pre>
+<p>&#x426;&#x435; &#x432;&#x456;&#x434;&#x431;&#x443;&#x432;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;, &#x442;&#x43E;&#x43C;&#x443; &#x449;&#x43E; &#x434;&#x43B;&#x44F; &#x432;&#x441;&#x456;&#x445; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x439; &#x446;&#x438;&#x43A;&#x43B;&#x456;&#x432; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43E;&#x434;&#x43D;&#x430; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x430;.</p>
+<h2 id="%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-let"><a class="header-anchor" href="#%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-let" aria-hidden="true">&#xA7;</a> &#x41A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; let</h2>
+<p>&#x412; ES6 &#x43F;&#x435;&#x440;&#x435;&#x434;&#x431;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x43D;&#x43E;&#x432;&#x438;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x456;&#x431; &#x434;&#x43B;&#x44F; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; &#x447;&#x435;&#x440;&#x435;&#x437; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; var. <strong>&#x417;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443;</strong>, &#x449;&#x43E; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; var &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x435; &#x456; &#x43C;&#x43E;&#x436;&#x435; &#x431;&#x443;&#x442;&#x438; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x435;.</p>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; &#x447;&#x435;&#x440;&#x435;&#x437; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; let:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; = &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;;
+<span class="hljs-keyword">let</span> counter = <span class="hljs-number">3</span>;
+</code></pre>
+<p>&#x423; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43E;&#x457; &#x447;&#x435;&#x440;&#x435;&#x437; let &#x454; &#x447;&#x43E;&#x442;&#x438;&#x440;&#x438; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x438;&#x445; &#x432;&#x456;&#x434;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x432;&#x456;&#x434; var:</p>
+<ol>
+<li>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; let - &#x431;&#x43B;&#x43E;&#x43A; {}</li>
+</ol>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x43C;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x448;&#x438;&#x43C;&#x43E; &#x43C;&#x438;&#x43D;&#x443;&#x43B;&#x438;&#x439; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x434;&#x435; &#x431;&#x443;&#x43B;&#x430; &#x43F;&#x440;&#x43E;&#x434;&#x435;&#x43C;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x430; &#x43E;&#x441;&#x43E;&#x431;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x447;&#x435;&#x440;&#x435;&#x437; var &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x446;&#x438;&#x43A;&#x43B;&#x456;&#x432; &#x443; &#x443;&#x43C;&#x43E;&#x432;&#x43D;&#x438;&#x445; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x456;&#x432; &#x456;&#x437; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43B;&#x43E;&#x432;&#x430; let, &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43F;&#x43E;&#x431;&#x430;&#x447;&#x438;&#x442;&#x438;, &#x449;&#x43E; let &#x43C;&#x430;&#x454; &#x446;&#x456;&#x43B;&#x43A;&#x43E;&#x43C; &#x437;&#x440;&#x43E;&#x437;&#x443;&#x43C;&#x456;&#x43B;&#x443; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x456;, &#x430; &#x441;&#x430;&#x43C;&#x435; &#x43D;&#x435; &#x432;&#x438;&#x434;&#x43D;&#x438;&#x439; &#x437;&#x430; &#x43C;&#x435;&#x436;&#x430;&#x43C;&#x438; &#x446;&#x438;&#x43A;&#x43B;&#x456;&#x432; &#x456; &#x443;&#x43C;&#x43E;&#x432;&#x43D;&#x438;&#x445; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x456;&#x432;.</p>
+<pre><code class="language-js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;<span class="hljs-number">6</span>; i++){
+}
+
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//ReferenceError: i is not defined</span>
+
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>){
+	<span class="hljs-keyword">var</span> if_variable = <span class="hljs-number">3</span>; <span class="hljs-comment">//3</span>
+}
+
+<span class="hljs-built_in">console</span>.log(if_variable); <span class="hljs-comment">//ReferenceError: if_variable is not defined</span>
+</code></pre>
+<p><strong>&#x417;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443;</strong>, &#x449;&#x43E; &#x432; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x432;&#x438;&#x43F;&#x430;&#x434;&#x43A;&#x443; &#x442;&#x440;&#x430;&#x43F;&#x43B;&#x44F;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x430; &#x456; &#x43A;&#x43E;&#x434; &#x437;&#x443;&#x43F;&#x438;&#x43D;&#x44F;&#x454; &#x441;&#x432;&#x43E;&#x454; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x43D;&#x43D;&#x44F;.</p>
+<ol start="2">
+<li>&#x41F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x442;&#x438; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443; let &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x430;. &#x41F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43F;&#x440;&#x438;&#x437;&#x432;&#x435;&#x434;&#x435; &#x434;&#x43E; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x438;.</li>
+</ol>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> a = <span class="hljs-number">2</span>; <span class="hljs-comment">// Identifier &apos;a&apos; has already been declared</span>
+</code></pre>
+<ol start="3">
+<li>&#x417;&#x43C;&#x456;&#x43D;&#x43D;&#x430; let &#x43D;&#x435; &#x456;&#x441;&#x43D;&#x443;&#x454; &#x434;&#x43E; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442;&#x443; &#x456;&#x43D;&#x456;&#x446;&#x456;&#x430;&#x43B;&#x456;&#x437;&#x430;&#x446;&#x456;&#x457;, &#x437;&#x432;&#x435;&#x440;&#x43D;&#x435;&#x43D;&#x43D;&#x44F; &#x434;&#x43E; &#x43D;&#x435;&#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43E;&#x457; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x43F;&#x440;&#x438;&#x437;&#x432;&#x435;&#x434;&#x435; &#x434;&#x43E; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x438;.</li>
+</ol>
+<pre><code class="language-js"><span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">//a is not defined</span>
+
+<span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>;
+</code></pre>
+<ol start="4">
+<li>&#x414;&#x43B;&#x44F; &#x43A;&#x43E;&#x436;&#x43D;&#x43E;&#x457; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x457; &#x446;&#x438;&#x43A;&#x43B;&#x443; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x441;&#x432;&#x43E;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x430;.</li>
+</ol>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeArmy</span>(<span class="hljs-params"></span>) </span>{
+
+  <span class="hljs-keyword">var</span> shooters = [];
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+    <span class="hljs-keyword">var</span> shooter = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">// shooters function</span>
+      <span class="hljs-built_in">console</span>.log( i ); <span class="hljs-comment">// should output number of shooters</span>
+    };
+    shooters.push(shooter);
+  }
+
+  <span class="hljs-keyword">return</span> shooters;
+}
+
+<span class="hljs-keyword">var</span> army = makeArmy();
+
+army[<span class="hljs-number">0</span>](); <span class="hljs-comment">// shooter outputs 10</span>
+army[<span class="hljs-number">5</span>](); <span class="hljs-comment">// shooter outputs 5...</span>
+<span class="hljs-comment">// .. all shouters outputs</span>
+</code></pre>
+<h2 id="%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-const"><a class="header-anchor" href="#%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-const" aria-hidden="true">&#xA7;</a> &#x41A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; const</h2>
+<p>&#x41E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; const &#x437;&#x430;&#x434;&#x430;&#x454; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x443;, &#x442;&#x43E;&#x431;&#x442;&#x43E; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443;, &#x44F;&#x43A;&#x443; &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x437;&#x43C;&#x456;&#x43D;&#x44E;&#x432;&#x430;&#x442;&#x438;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> LOCALE = <span class="hljs-string">&apos;UA&apos;</span>;
+LOCALE = <span class="hljs-string">&quot;EU&quot;</span>; <span class="hljs-comment">//TypeError: Assignment to constant variable.</span>
+</code></pre>
+<p>&#x412; &#x456;&#x43D;&#x448;&#x43E;&#x43C;&#x443; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; const &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x456;&#x447;&#x43D;&#x435; let.</p>
+<blockquote>
+<p>&#x417;&#x430;&#x443;&#x432;&#x430;&#x436;&#x438;&#x43C;&#x43E;, &#x449;&#x43E; &#x44F;&#x43A;&#x449;&#x43E; &#x432; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x443; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x454;&#x43D;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;, &#x442;&#x43E; &#x432;&#x456;&#x434; &#x437;&#x43C;&#x456;&#x43D;&#x438; &#x437;&#x430;&#x445;&#x438;&#x449;&#x435;&#x43D;&#x430; &#x441;&#x430;&#x43C;&#x430; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x430;, &#x430;&#x43B;&#x435; &#x43D;&#x435; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43D;&#x435;&#x457;:</p>
+</blockquote>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> user = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;&#x412;&#x430;&#x441;&#x44F;&quot;</span>
+};
+
+user.name = <span class="hljs-string">&quot;&#x41F;&#x435;&#x442;&#x44F;&quot;</span>; <span class="hljs-comment">// &#x41C;&#x43E;&#x436;&#x43D;&#x430;</span>
+user = <span class="hljs-number">5</span>; <span class="hljs-comment">// &#x411;&#x443;&#x434;&#x435; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x430;</span>
+</code></pre>
+<h1 id="%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D1%81%D1%82%D1%80%D1%96%D0%BB%D0%BA%D0%B8(arrow-functions)"><a class="header-anchor" href="#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D1%81%D1%82%D1%80%D1%96%D0%BB%D0%BA%D0%B8(arrow-functions)" aria-hidden="true">&#xA7;</a> &#x424;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x438;(Arrow functions)</h1>
+<p><strong>&#x412;&#x438;&#x440;&#x430;&#x437;&#x438; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43E;&#x447;&#x43D;&#x438;&#x445; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x439;</strong> &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x431;&#x456;&#x43B;&#x44C;&#x448; &#x43A;&#x43E;&#x440;&#x43E;&#x442;&#x43A;&#x438;&#x439; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x432; &#x43F;&#x43E;&#x440;&#x456;&#x432;&#x43D;&#x44F;&#x43D;&#x43D;&#x456; &#x437; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43C;&#x438; &#x432;&#x438;&#x440;&#x430;&#x437;&#x430;&#x43C;&#x438; &#x456; &#x43B;&#x435;&#x43A;&#x441;&#x438;&#x447;&#x43D;&#x43E; &#x43F;&#x440;&#x438;&#x432;&apos;&#x44F;&#x437;&#x430;&#x43D;&#x456; &#x434;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; this (&#x430;&#x43B;&#x435; &#x43D;&#x435; &#x43F;&#x440;&#x438;&#x432;&apos;&#x44F;&#x437;&#x430;&#x43D;&#x456; &#x434;&#x43E; &#x432;&#x43B;&#x430;&#x441;&#x43D;&#x43E;&#x433;&#x43E; this, arguments, super, &#x430;&#x431;&#x43E; new.target). &#x421;&#x442;&#x440;&#x456;&#x43B;&#x43E;&#x447;&#x43D;&#x456; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; &#x437;&#x430;&#x432;&#x436;&#x434;&#x438; &#x430;&#x43D;&#x43E;&#x43D;&#x456;&#x43C;&#x43D;&#x456;.</p>
+<p>&#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44E; &#x432;&#x438;&#x449;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x443;, &#x44F;&#x43A;&#x430; &#x43F;&#x440;&#x438;&#x439;&#x43C;&#x430;&#x454; &#x456;&#x43D;&#x448;&#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44E; &#x456; &#x457;&#x457; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x454;:</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params">innerFunc</span>)</span>{
+  <span class="hljs-keyword">var</span> message = <span class="hljs-string">&quot;Hello World&quot;</span>;
+  innerFunc(message);
+}
+
+outer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">message</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(message);
+});
+</code></pre>
+<p>&#x412; &#x44F;&#x43A;&#x43E;&#x441;&#x442;&#x456; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430;, &#x43F;&#x440;&#x438; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; outer &#x43C;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x454;&#x43C;&#x43E; &#x430;&#x43D;&#x43E;&#x43D;&#x456;&#x43C;&#x43D;&#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44E;. &#x424;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F; &#x432;&#x435;&#x440;&#x445;&#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x443;(outer), &#x43F;&#x440;&#x438;&#x439;&#x43C;&#x430;&#x454; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44E; &#x456; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x454; &#x457;&#x457; &#x432; &#x441;&#x43E;&#x431;&#x456;.</p>
+<p>&#x420;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E;, &#x44F;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x441;&#x43A;&#x43E;&#x440;&#x43E;&#x442;&#x438;&#x442;&#x438; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43D;&#x44F; &#x430;&#x43D;&#x43E;&#x43D;&#x456;&#x43C;&#x43D;&#x43E;&#x457; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457;, &#x43F;&#x440;&#x438; &#x457;&#x457; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x456; &#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44E; &#x437;&#x43E;&#x432;&#x43D;&#x456;&#x448;&#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x443;.</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">outer</span>(<span class="hljs-params">innerFunc</span>)</span>{
+  <span class="hljs-keyword">var</span> message = <span class="hljs-string">&quot;Hello World&quot;</span>;
+  innerFunc(message);
+}
+
+outer(<span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(message);
+});
+</code></pre>
+<p>&#x41C;&#x43E;&#x436;&#x43D;&#x430; &#x43F;&#x43E;&#x431;&#x456;&#x447;&#x438;&#x442;&#x438;, &#x449;&#x43E; &#x43C;&#x438; &#x43F;&#x43E;&#x437;&#x431;&#x430;&#x432;&#x438;&#x43B;&#x438;&#x441;&#x44F; &#x432;&#x456;&#x434; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43B;&#x43E;&#x432;&#x430; function &#x456; &#x432;&#x456;&#x434; &#x434;&#x443;&#x436;&#x43E;&#x43A;, &#x44F;&#x43A;&#x456; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x44E;&#x442;&#x44C; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457;.</p>
+<p>&#x421;&#x442;&#x440;&#x456;&#x43B;&#x43E;&#x447;&#x43D;&#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44E; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x457;&#x442;&#x438; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;&#x439;. &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> func1 = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(message);
+
+<span class="hljs-keyword">let</span> func2 = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(message);
+
+<span class="hljs-keyword">const</span> func3 = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(message);
+
+func1(<span class="hljs-string">&apos;Func1&apos;</span>); <span class="hljs-comment">//Func1</span>
+func2(<span class="hljs-string">&apos;Func2&apos;</span>); <span class="hljs-comment">//Func2</span>
+func3(<span class="hljs-string">&apos;Func3&apos;</span>); <span class="hljs-comment">//Func3</span>
+</code></pre>
+<p>&#x417;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443;, &#x449;&#x43E; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x430;(=&gt;) &#x432; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x456; &#x432;&#x456;&#x434;&#x441;&#x443;&#x442;&#x43D;&#x456; &#x444;&#x456;&#x433;&#x443;&#x440;&#x43D;&#x456; &#x434;&#x443;&#x436;&#x43A;&#x438;, &#x457;&#x445; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43E;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x438;, &#x44F;&#x43A;&#x449;&#x43E; &#x442;&#x456;&#x43B;&#x43E; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x43E;&#x432;&#x43E;&#x457; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x456;&#x437; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x440;&#x430;&#x437;&#x443;.</p>
+<p>&#x417;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x44F;&#x43A;&#x449;&#x43E; &#x432; &#x442;&#x456;&#x43B;&#x456; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x43E;&#x432;&#x43E;&#x457; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; &#x43D;&#x435;&#x43C;&#x430;&#x454; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430; return, &#x432;&#x456;&#x43D; &#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C;&#x441;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E;. &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> sum = <span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a+b;
+<span class="hljs-keyword">let</span> res = sum(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(res); <span class="hljs-comment">//3</span>
+</code></pre>
+<p>&#x41D;&#x430;&#x432;&#x456;&#x434;&#x43C;&#x456;&#x43D;&#x443;, &#x432;&#x456;&#x434; &#x43C;&#x438;&#x43D;&#x443;&#x43B;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x443;, &#x43C;&#x438; &#x43E;&#x431;&#x435;&#x440;&#x43D;&#x443;&#x43B;&#x438; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438;, &#x44F;&#x43A;&#x456; &#x43F;&#x440;&#x438;&#x439;&#x43C;&#x430;&#x454; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43E;&#x447;&#x43D;&#x430; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F; &#x432; &#x434;&#x443;&#x436;&#x43A;&#x438;. &#x41D;&#x430;&#x441;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x456; &#x434;&#x43E; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;&#x443; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43D;&#x44F; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x456;&#x432; &#x432; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x43E;&#x432;&#x438;&#x445; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F;&#x445; &#x454; &#x434;&#x435;&#x44F;&#x43A;&#x456; &#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x430;, &#x432; &#x437;&#x430;&#x43B;&#x435;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x456; &#x432;&#x456;&#x434; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x43E;&#x441;&#x442;&#x456; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x456;&#x432;.</p>
+<p>&#x41F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x430; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43D;&#x44F; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x456;&#x432; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x43E;&#x432;&#x438;&#x445; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x439;:</p>
+<ol>
+<li>&#x42F;&#x43A;&#x449;&#x43E; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x43E;&#x432;&#x430; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F; &#x43D;&#x435; &#x43C;&#x430;&#x454; &#x436;&#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430;, &#x43E;&#x431;&#x43E; &#x43C;&#x430;&#x454; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; &#x434;&#x432;&#x43E;&#x445;, &#x442;&#x43E; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430;&#x442;&#x43E;&#x447;&#x443;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x432; &#x43A;&#x440;&#x443;&#x433;&#x43B;&#x456; &#x434;&#x443;&#x436;&#x43A;&#x438;:</li>
+</ol>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> func1 = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-number">5</span>;
+<span class="hljs-keyword">let</span> func2 = <span class="hljs-function">(<span class="hljs-params">a,b</span>) =&gt;</span> a+b;
+<span class="hljs-keyword">let</span> func3 = <span class="hljs-function">(<span class="hljs-params">a,b,c</span>) =&gt;</span> a+b+c;
+</code></pre>
+<ol start="2">
+<li>&#x42F;&#x43A;&#x449;&#x43E; &#x441;&#x442;&#x440;&#x456;&#x43B;&#x43A;&#x43E;&#x432;&#x430; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F; &#x43C;&#x430;&#x454; &#x43E;&#x434;&#x438;&#x43D; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;, &#x442;&#x43E; &#x43A;&#x440;&#x443;&#x433;&#x43B;&#x456; &#x434;&#x443;&#x436;&#x43A;&#x438; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43E;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x438;:</li>
+</ol>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> func1 = <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> a++;
+<span class="hljs-keyword">let</span> func2 = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a++;
+</code></pre>
+<h1 id="%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8-%D0%B7%D0%B0-%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D1%87%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC"><a class="header-anchor" href="#%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B8-%D0%B7%D0%B0-%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D1%87%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%D0%BC" aria-hidden="true">&#xA7;</a> &#x41F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;</h1>
+<p><strong>&#x41F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;</strong> &#x434;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x44E;&#x442;&#x44C; &#x437;&#x430;&#x434;&#x430;&#x432;&#x430;&#x442;&#x438; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43C; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430;&#x43C; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;, &#x44F;&#x43A;&#x449;&#x43E; &#x434;&#x43B;&#x44F; &#x43D;&#x438;&#x445; &#x43D;&#x435; &#x432;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x430;&#x431;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x43D;&#x438;&#x439; undefined.</p>
+<p>ES5 &#x43D;&#x435;&#x43C;&#x430;&#x454; &#x442;&#x430;&#x43A;&#x43E;&#x457; &#x444;&#x456;&#x447;&#x456; &#x44F;&#x43A; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;. &#x429;&#x43E;&#x431; &#x456;&#x43C;&#x456;&#x442;&#x443;&#x432;&#x430;&#x442;&#x438;, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x432;&#x441;&#x44F; &#x43F;&#x430;&#x442;&#x442;&#x435;&#x440;&#x43D; &quot;&#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;&quot;. &#x41F;&#x440;&#x430;&#x446;&#x44E;&#x454; &#x432;&#x456;&#x43D; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x43C; &#x447;&#x438;&#x43D;&#x43E;&#x43C;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  a = a || <span class="hljs-number">10</span>;
+  b = b || <span class="hljs-number">20</span>;
+  <span class="hljs-keyword">return</span> a + b;
+};
+sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// 3</span>
+sum(<span class="hljs-number">1</span>);    <span class="hljs-comment">// 21</span>
+sum();     <span class="hljs-comment">// 30</span>
+</code></pre>
+<p>&#x424;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F; sum &#x43F;&#x440;&#x438;&#x439;&#x43C;&#x430;&#x454; &#x434;&#x432;&#x430; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430; a &#x456; b &#x456; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454; &#x457;&#x445; &#x441;&#x443;&#x43C;&#x443;. &#x42F;&#x43A;&#x449;&#x43E; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; b &#x43D;&#x435; &#x431;&#x443;&#x432; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x43D;&#x438;&#x439;, &#x442;&#x43E; &#x432;&#x456;&#x43D; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E; &#x441;&#x442;&#x430;&#x454; &#x440;&#x456;&#x432;&#x43D;&#x438;&#x43C; 20, &#x44F;&#x43A;&#x449;&#x43E; &#x436; &#x43D;&#x435; &#x431;&#x443;&#x43B;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x43D;&#x43E; &#x436;&#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430; - a &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x44E;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; 10, &#x430; b - 20. &#x412;&#x441;&#x435; &#x43F;&#x440;&#x430;&#x446;&#x44E;&#x454; &#x434;&#x43E;&#x431;&#x440;&#x435; &#x434;&#x43E; &#x442;&#x438;&#x445; &#x43F;&#x456;&#x440;, &#x43F;&#x43E;&#x43A;&#x438; &#x43D;&#x435; &#x437;&apos;&#x44F;&#x432;&#x43B;&#x44F;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x456;&#x434;&#x43D;&#x456;&#x441;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x442;&#x438; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x43E;&#x432;&#x435; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;, &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x43D;&#x443;&#x43B;&#x44C;:</p>
+<pre><code class="language-js"><span class="hljs-comment">// &#x412;&#x438;&#x440;&#x430;&#x437; (0 || 10) &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x43D;&#x435; 10, &#x442;&#x430;&#x43A; &#x44F;&#x43A; 0 - &#x445;&#x438;&#x431;&#x43D;&#x435; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;</span>
+sum(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">// 11</span>
+</code></pre>
+<p>&#x414;&#x43B;&#x44F; &#x442;&#x43E;&#x433;&#x43E;, &#x449;&#x43E;&#x431; &#x443;&#x43D;&#x438;&#x43A;&#x43D;&#x443;&#x442;&#x438; &#x43F;&#x43E;&#x434;&#x456;&#x431;&#x43D;&#x438;&#x445; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;, &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x442;&#x438; &#x442;&#x435;&#x440;&#x43D;&#x430;&#x440;&#x43D;&#x438;&#x439; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+  a = (a !== <span class="hljs-literal">undefined</span>) ? a : <span class="hljs-number">10</span>;
+  b = (b !== <span class="hljs-literal">undefined</span>) ? b : <span class="hljs-number">20</span>;
+  <span class="hljs-keyword">return</span> a + b;
+};
+</code></pre>
+<p>&#x417; &#x440;&#x435;&#x43B;&#x456;&#x437;&#x43E;&#x43C; ES6 &#x437;&apos;&#x44F;&#x432;&#x438;&#x43B;&#x430;&#x441;&#x44F; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x437;&#x430;&#x434;&#x430;&#x432;&#x430;&#x442;&#x438; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x43F;&#x440;&#x438; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x456; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457;:</p>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;:</p>
+<pre><code class="language-js">function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
+   statements
+}
+</code></pre>
+<p>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> sum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span></span>) </span>{
+  <span class="hljs-keyword">return</span> a + b;
+};
+</code></pre>
+<h1 id="template-literals"><a class="header-anchor" href="#template-literals" aria-hidden="true">&#xA7;</a> Template Literals</h1>
+<p><strong>&#x428;&#x430;&#x431;&#x43B;&#x43E;&#x43D;&#x43D;&#x438;&#x43C;&#x438; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x430;&#x43B;&#x430;&#x43C;&#x438;</strong> &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x456; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x430;&#x43B;&#x438;, &#x449;&#x43E; &#x434;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x44E;&#x442;&#x44C; &#x437;&#x430;&#x441;&#x442;&#x43E;&#x441;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x432;&#x438;&#x440;&#x430;&#x437;&#x456;&#x432; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456;. &#x417; &#x43D;&#x438;&#x43C;&#x438; &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x456; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x430;&#x43B;&#x438; &#x456; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x43E;&#x432;&#x443; &#x456;&#x43D;&#x442;&#x435;&#x440;&#x43F;&#x43E;&#x43B;&#x44F;&#x446;&#x456;&#x44E;. &#x423; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x446;&#x456;&#x44F;&#x445; &#x434;&#x43E; ES2015 &#x432;&#x43E;&#x43D;&#x438; &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x43B;&#x438;&#x441;&#x44F; &quot;&#x448;&#x430;&#x431;&#x43B;&#x43E;&#x43D;&#x43D;&#x438;&#x43C;&#x438; &#x440;&#x44F;&#x434;&#x43A;&#x430;&#x43C;&#x438;&quot;.</p>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> str1 = <span class="hljs-string">`some text`</span>;
+<span class="hljs-keyword">let</span> str2 = <span class="hljs-string">`
+some text
+`</span>;
+
+<span class="hljs-built_in">console</span>.log(str1); <span class="hljs-comment">//some text</span>
+<span class="hljs-built_in">console</span>.log(str2); <span class="hljs-comment">//some text</span>
+</code></pre>
+<p>&#x414;&#x43B;&#x44F; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x432;&#x438;&#x440;&#x430;&#x437;&#x456;&#x432; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456;, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x439; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;:</p>
+<pre><code class="language-js"><span class="hljs-string">`<span class="hljs-subst">${expression}</span>`</span>
+</code></pre>
+<p>&#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> counter = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> terminator = <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">let</span> str = <span class="hljs-string">`
+Terminator is <span class="hljs-subst">${terminator}</span>. Counter variable is 
+<span class="hljs-subst">${counter}</span>
+`</span>;
+
+<span class="hljs-built_in">console</span>.log(str); <span class="hljs-comment">//Terminator is 0. Counter variable is 1</span>
+</code></pre>
+<h1 id="%D0%B4%D0%B5%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F(destructuring)"><a class="header-anchor" href="#%D0%B4%D0%B5%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F(destructuring)" aria-hidden="true">&#xA7;</a> &#x414;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F;(Destructuring)</h1>
+<p><strong>&#x414;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F;</strong> &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x440;&#x43E;&#x437;&#x431;&#x438;&#x442;&#x442;&#x44F; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x43D;&#x43E;&#x457; &#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438; &#x43D;&#x430; &#x431;&#x456;&#x43B;&#x44C;&#x448; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x456; &#x447;&#x430;&#x441;&#x442;&#x438;&#x43D;&#x438;. &#x423; JavaScript &#x446;&#x44F; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x43D;&#x430; &#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x430; &#x437;&#x430;&#x437;&#x432;&#x438;&#x447;&#x430;&#x439; &#x454; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x43E;&#x43C; &#x430;&#x431;&#x43E; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x43E;&#x43C;. &#x417;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;&#x443; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x456;&#x457; &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x432;&#x438;&#x442;&#x44F;&#x433;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x43D;&#x448;&#x456; &#x444;&#x440;&#x430;&#x433;&#x43C;&#x435;&#x43D;&#x442;&#x438; &#x437; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x456;&#x432; &#x456; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;.</p>
+<h2 id="object-destructuring"><a class="header-anchor" href="#object-destructuring" aria-hidden="true">&#xA7;</a> Object Destructuring</h2>
+<p>&#x420;&#x437;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E; &#x43D;&#x430;&#x43C;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x439; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">&apos;A8&apos;</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">&apos;Audi&apos;</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">&apos;V8&apos;</span>
+};
+</code></pre>
+<p>&#x429;&#x43E;&#x44C; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x443;&#x432;&#x430;&#x442;&#x438; &#x446;&#x435;&#x439; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x43E; &#x432; &#x43B;&#x456;&#x432;&#x456;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438;&#x43D;&#x456; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x454;&#x43D;&#x43D;&#x44F;, &#x43F;&#x435;&#x440;&#x435;&#x447;&#x438;&#x441;&#x43B;&#x438;&#x442;&#x438; &#x43D;&#x430;&#x437;&#x432;&#x438; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x44F;&#x43A;&#x456; &#x43C;&#x438; &#x445;&#x43E;&#x447;&#x435;&#x43C;&#x43E; &#x43C;&#x430;&#x442;&#x438;, &#x430; &#x432; &#x43F;&#x440;&#x430;&#x432;&#x456;&#x439; &#x441;&#x430;&#x43C; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">&apos;A8&apos;</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">&apos;Audi&apos;</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">&apos;V8&apos;</span>
+};
+
+<span class="hljs-keyword">const</span> {model, brand} = car;
+<span class="hljs-built_in">console</span>.log(model, brand); <span class="hljs-comment">//A8 Audi</span>
+</code></pre>
+<h3 id="%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%96%D0%B4%D0%BC%D1%96%D0%BD%D0%BD%D0%B8%D1%85-%D1%96%D0%B4%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D1%96%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2-%D0%B2%D1%96%D0%B4-%D0%BA%D0%BB%D1%8E%D1%87%D1%96%D0%B2"><a class="header-anchor" href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D1%96%D0%B4%D0%BC%D1%96%D0%BD%D0%BD%D0%B8%D1%85-%D1%96%D0%B4%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D1%96%D0%BA%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2-%D0%B2%D1%96%D0%B4-%D0%BA%D0%BB%D1%8E%D1%87%D1%96%D0%B2" aria-hidden="true">&#xA7;</a> &#x412;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x432;&#x456;&#x434;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x456;&#x432; &#x432;&#x456;&#x434; &#x43A;&#x43B;&#x44E;&#x447;&#x456;&#x432;</h3>
+<p>&#x414;&#x43E; &#x446;&#x438;&#x445; &#x43F;&#x456;&#x440; &#x43C;&#x438; &#x43F;&#x440;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x43B;&#x438; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;, &#x44F;&#x43A;&#x456; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x442;&#x430;&#x43A;&#x443; &#x436; &#x43D;&#x430;&#x437;&#x432;&#x443;, &#x449;&#x43E; &#x456; &#x432;&#x456;&#x434;&#x43F;&#x43E;&#x432;&#x456;&#x434;&#x43D;&#x438;&#x439; &#x43A;&#x43B;&#x44E;&#x447; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;. &#x417;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;&#x443; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43F;&#x440;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x438;&#x442;&#x438; &#x456;&#x43D;&#x448;&#x435; &#x456;&#x43C;&apos;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457;: <code>[object_key]: [variable_name]</code>. &#x41C;&#x43E;&#x436;&#x43D;&#x430; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x442;&#x438; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x437;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;&#x443;: <code>[object_key]: [variable_name] = [default_value]</code></p>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;1:</strong> &#x412;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x432;&#x456;&#x434;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x456;&#x432; &#x432;&#x456;&#x434; &#x43A;&#x43B;&#x44E;&#x447;&#x456;&#x432;, &#x43F;&#x440;&#x438; &#x434;&#x438;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">&apos;A8&apos;</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">&apos;Audi&apos;</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">&apos;V8&apos;</span>
+}
+
+<span class="hljs-keyword">const</span> {<span class="hljs-attr">brand</span>:title, <span class="hljs-attr">price</span>:price = <span class="hljs-number">200000</span>} = car;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Product title is <span class="hljs-subst">${title}</span> and price is <span class="hljs-subst">${price}</span>`</span>); <span class="hljs-comment">//Product title is Audi and price is 200000</span>
+</code></pre>
+<h3 id="%D0%B4%D0%B8%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F-%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%85-%D0%BE%D0%B1&apos;%D1%94%D0%BA%D1%82%D1%96%D0%B2"><a class="header-anchor" href="#%D0%B4%D0%B8%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F-%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%85-%D0%BE%D0%B1&apos;%D1%94%D0%BA%D1%82%D1%96%D0%B2" aria-hidden="true">&#xA7;</a> &#x414;&#x438;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x435;&#x43D;&#x438;&#x445; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;</h3>
+<p>&#x414;&#x430;&#x432;&#x430;&#x442;&#x435; &#x434;&#x435;&#x449;&#x43E; &#x437;&#x43C;&#x456;&#x43D;&#x438;&#x43C;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; car &#x456; &#x434;&#x43E;&#x434;&#x430;&#x43C;&#x43E; &#x434;&#x43E; &#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x435;&#x43D;&#x438;&#x439; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">&apos;A8&apos;</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">&apos;Audi&apos;</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">&apos;V8&apos;</span>,
+  <span class="hljs-attr">audio</span>: {
+    <span class="hljs-attr">power</span>: <span class="hljs-string">&apos;50DB&apos;</span>
+  }
+}
+</code></pre>
+<p>&#x422;&#x43E;&#x434;&#x456; &#x434;&#x438;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x435;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430; &#x431;&#x443;&#x434;&#x435; &#x432;&#x438;&#x433;&#x43B;&#x44F;&#x434;&#x430;&#x442;&#x438; &#x44F;&#x43A;:</p>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;1:</strong> &#x414;&#x438;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44F; &#x432;&#x43A;&#x43B;&#x430;&#x434;&#x435;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> car = {
+  <span class="hljs-attr">model</span>: <span class="hljs-string">&apos;A8&apos;</span>,
+  <span class="hljs-attr">brand</span>: <span class="hljs-string">&apos;Audi&apos;</span>,
+  <span class="hljs-attr">engine</span>: <span class="hljs-string">&apos;V8&apos;</span>,
+  <span class="hljs-attr">audio</span>: {
+    <span class="hljs-attr">power</span>: <span class="hljs-string">&apos;50DB&apos;</span>
+  }
+}
+
+<span class="hljs-keyword">const</span> {model, <span class="hljs-attr">audio</span>: {power}} = car;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`There is an audio system in <span class="hljs-subst">${model}</span> with power <span class="hljs-subst">${power}</span>`</span>);
+</code></pre>
+<h2 id="array-destructuring"><a class="header-anchor" href="#array-destructuring" aria-hidden="true">&#xA7;</a> Array Destructuring</h2>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x456;&#x432;:</p>
+<pre><code class="language-js">var_keyword [var_name, var_name] = source;
+</code></pre>
+<p>&#x434;&#x435;:</p>
+<ul>
+<li>var_keyword - var, let, const;</li>
+<li>var_name - &#x456;&#x43C;&apos;&#x44F; &#x437;&#x43C;&#x456;&#x456;&#x43D;&#x43D;&#x43E;&#x457;(&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457; &#x431;&#x443;&#x434;&#x435; &#x43F;&#x43E;&#x43C;&#x456;&#x449;&#x435;&#x43D;&#x43E; &#x432; &#x446;&#x44E; &#x437;&#x43C;&#x456;&#x43D;&#x443;);</li>
+<li>source - &#x43C;&#x430;&#x441;&#x438;&#x432; &#x434;&#x43B;&#x44F; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x457;.</li>
+</ul>
+<p>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> modelsDb = [<span class="hljs-string">&apos;latitude e6520&apos;</span>, <span class="hljs-string">&apos;vostro r77&apos;</span>, <span class="hljs-string">&apos;g9&apos;</span>];
+<span class="hljs-keyword">let</span> [m1, m2] = modelsDb;
+
+<span class="hljs-built_in">console</span>.log(m1); <span class="hljs-comment">// latitude e6520</span>
+<span class="hljs-built_in">console</span>.log(m2); <span class="hljs-comment">// vostro r77</span>
+</code></pre>
+<p><em><strong>&#x412;&#x430;&#x436;&#x43B;&#x438;&#x432;&#x43E;:</strong></em> &#x42F;&#x43A;&#x449;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x44C; &#x432; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x456; &#x43C;&#x435;&#x43D;&#x448;&#x435;, &#x43D;&#x456;&#x436; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; - &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x438; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;, &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x457;&#x442;&#x438; undefined. &#x42F;&#x43A;&#x449;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x44C; &#x432; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x456; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435;, &#x432;&#x43E;&#x43D;&#x438; &#x431;&#x443;&#x434;&#x443;&#x442;&#x44C; &#x43F;&#x440;&#x43E;&#x456;&#x433;&#x43D;&#x43E;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x456;.</p>
+<h3 id="%D0%BF%D1%80%D0%BE%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B7%D0%BC%D1%96%D0%BD%D0%B8%D1%85"><a class="header-anchor" href="#%D0%BF%D1%80%D0%BE%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B7%D0%BC%D1%96%D0%BD%D0%B8%D1%85" aria-hidden="true">&#xA7;</a> &#x41F;&#x440;&#x43E;&#x43F;&#x443;&#x449;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x438;&#x445;</h3>
+<p>&#x41D;&#x435;&#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x456; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x438; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x432;&#x438;&#x434;&#x430;&#x43B;&#x438;&#x442;&#x438;, &#x43F;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x432;&#x448;&#x438; &#x434;&#x43E;&#x434;&#x430;&#x442;&#x43A;&#x43E;&#x432;&#x443; &#x43A;&#x43E;&#x43C;&#x443;:</p>
+<pre><code class="language-js"><span class="hljs-keyword">let</span> [, , , cap] = <span class="hljs-string">&quot;London is a capital of Great Britain&quot;</span>.split(<span class="hljs-string">&quot; &quot;</span>);
+
+<span class="hljs-built_in">console</span>.log(cap); <span class="hljs-comment">// capital</span>
+
+<span class="hljs-keyword">let</span> [lon, , , , , gre] = <span class="hljs-string">&quot;London is a capital of Great Britain&quot;</span>.split(<span class="hljs-string">&quot; &quot;</span>);
+
+<span class="hljs-built_in">console</span>.log(lon); <span class="hljs-comment">//London</span>
+<span class="hljs-built_in">console</span>.log(gre); <span class="hljs-comment">//Great</span>
+</code></pre>
+<h3 id="spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80"><a class="header-anchor" href="#spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80" aria-hidden="true">&#xA7;</a> Spread - &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;</h3>
+<h4 id="%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81"><a class="header-anchor" href="#%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81" aria-hidden="true">&#xA7;</a> &#x412;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;</h4>
+<h4 id="%D0%B4%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%96%D0%B2-%D0%B2-%D0%BA%D1%96%D0%BD%D0%B5%D1%86%D1%8C-%D1%96-%D0%BF%D0%BE%D1%87%D0%B0%D1%82%D0%BE%D0%BA-%D0%BC%D0%B0%D1%81%D0%B8%D0%B2%D1%83%2C-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D1%8E%D1%87%D0%B8-spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80"><a class="header-anchor" href="#%D0%B4%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%96%D0%B2-%D0%B2-%D0%BA%D1%96%D0%BD%D0%B5%D1%86%D1%8C-%D1%96-%D0%BF%D0%BE%D1%87%D0%B0%D1%82%D0%BE%D0%BA-%D0%BC%D0%B0%D1%81%D0%B8%D0%B2%D1%83%2C-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D1%8E%D1%87%D0%B8-spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80" aria-hidden="true">&#xA7;</a> &#x414;&#x43E;&#x434;&#x430;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x456;&#x432; &#x432; &#x43A;&#x456;&#x43D;&#x435;&#x446;&#x44C; &#x456; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43E;&#x43A; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443;, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; spread - &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;</h4>
+<h4 id="rest---param%2C-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D1%8E%D1%87%D0%B8-spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80"><a class="header-anchor" href="#rest---param%2C-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D1%8E%D1%87%D0%B8-spread---%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80" aria-hidden="true">&#xA7;</a> Rest - param, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; spread - &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;</h4>
+<h1 id="%D0%BA%D0%BB%D0%B0%D1%81%D0%B8"><a class="header-anchor" href="#%D0%BA%D0%BB%D0%B0%D1%81%D0%B8" aria-hidden="true">&#xA7;</a> &#x41A;&#x43B;&#x430;&#x441;&#x438;</h1>
+<p><strong>&#x41A;&#x43B;&#x430;&#x441;&#x438;</strong> &#x432; JavaScript &#x431;&#x443;&#x43B;&#x438; &#x432;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x456; &#x432; ECMAScript 2015 &#x456; &#x44F;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x44C; &#x441;&#x43E;&#x431;&#x43E;&#x44E; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x447;&#x43D;&#x438;&#x439; &#x446;&#x443;&#x43A;&#x43E;&#x440; &#x43D;&#x430;&#x434; &#x456;&#x441;&#x43D;&#x443;&#x44E;&#x447;&#x438;&#x43C; &#x432; JavaScript &#x43C;&#x435;&#x445;&#x430;&#x43D;&#x456;&#x437;&#x43C;&#x43E;&#x43C; &#x43F;&#x440;&#x43E;&#x442;&#x43E;&#x442;&#x438;&#x43F;&#x43D;&#x43E;&#x433;&#x43E; &#x43D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;. &#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x43D;&#x435; &#x432;&#x432;&#x43E;&#x434;&#x438;&#x442;&#x44C; &#x43D;&#x43E;&#x432;&#x443; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x43D;&#x43E;-&#x43E;&#x440;&#x456;&#x454;&#x43D;&#x442;&#x43E;&#x432;&#x430;&#x43D;&#x443; &#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x44C;, &#x430; &#x43D;&#x430;&#x434;&#x430;&#x454; &#x431;&#x456;&#x43B;&#x44C;&#x448; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x438;&#x439; &#x456; &#x437;&#x440;&#x43E;&#x437;&#x443;&#x43C;&#x456;&#x43B;&#x438;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x456;&#x431; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432; &#x456; &#x43E;&#x440;&#x433;&#x430;&#x43D;&#x456;&#x437;&#x430;&#x446;&#x456;&#x457; &#x43D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;.</p>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;:</p>
+<pre><code class="language-js">class &#x41D;&#x430;&#x437;&#x432;&#x430; [extends &#x411;&#x430;&#x442;&#x44C;&#x43A;&#x456;&#x432;&#x441;&#x44C;&#x43A;&#x438;&#x439; &#x43A;&#x43B;&#x430;&#x441;]  {
+  constructor
+  &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;
+}
+</code></pre>
+<p>&#x42F;&#x43A; &#x432;&#x438;&#x434;&#x43D;&#x43E;&#x456; &#x456;&#x437; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;&#x443; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x432; JS, &#x432; &#x43A;&#x43B;&#x430;&#x441;&#x456; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43E;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x438; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;, &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x43D;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x431;&#x430;&#x447;&#x435;&#x43D;&#x43E;. &#x410;&#x43B;&#x435; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x442;&#x438; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x430; &#x430;&#x431;&#x43E; &#x431;&#x443;&#x434;&#x44C;-&#x44F;&#x43A;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430;(&#x417;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43B;&#x43E;&#x432;&#x430; this). &#x413;&#x43E;&#x43B;&#x43E;&#x432;&#x43D;&#x435;, &#x449;&#x43E;&#x431; &#x446;&#x435;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x456;&#x434;&#x43F;&#x440;&#x430;&#x446;&#x44E;&#x432;&#x430;&#x432; &#x434;&#x43E; &#x437;&#x432;&#x435;&#x440;&#x43D;&#x435;&#x43D;&#x43D;&#x44F; &#x434;&#x43E; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;.</p>
+<p>&#x422;&#x430;&#x43A;&#x43E;&#x436; &#x43D;&#x435; &#x43C;&#x430;&#x454; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456; &#x432;&#x43A;&#x430;&#x437;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x438; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x443;, &#x442;&#x430;&#x43A;&#x456; &#x44F;&#x43A; private, public, protected.</p>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;1:</strong> &#x41E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x430; &#x456;&#x437; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x43E;&#x43C;, &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x443;.</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Starting init the kernel&apos;</span>);
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(); <span class="hljs-comment">//starting init the kernel</span>
+</code></pre>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;2:</strong> &#x41E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x430; &#x456;&#x437; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x43C;, &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x456; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443;.</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Starting init the kernel&apos;</span>);
+  }
+
+  boot(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;boot up&apos;</span>)
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(); <span class="hljs-comment">//starting init the kernel</span>
+kernel.boot(); <span class="hljs-comment">//boot up</span>
+</code></pre>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;3:</strong> &#x41E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x430; &#x456;&#x437; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43C;, &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x447;&#x430; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x442;&#x440;&#x430; &#x432; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440; &#x456; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;, &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x443;, &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; &#x456; &#x432;&#x438;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;.</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(mode){
+    <span class="hljs-keyword">this</span>.mode = mode;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Starting init the kernel in mode <span class="hljs-subst">${<span class="hljs-keyword">this</span>.mode}</span>`</span>);
+  }
+
+  boot(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;boot up&apos;</span>)
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(<span class="hljs-string">&apos;silent&apos;</span>); <span class="hljs-comment">//starting init the kernel in mode silent</span>
+kernel.boot(); <span class="hljs-comment">//boot up</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`mode is <span class="hljs-subst">${kernel.mode}</span>`</span>);
+</code></pre>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;3:</strong> &#x421;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x432; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;.</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kernel</span> </span>{
+  <span class="hljs-keyword">constructor</span>(mode){
+    <span class="hljs-keyword">this</span>.mode = mode;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Starting init the kernel in mode <span class="hljs-subst">${<span class="hljs-keyword">this</span>.mode}</span>`</span>);
+  }
+
+  boot(){
+    <span class="hljs-keyword">this</span>.bootStatus = <span class="hljs-string">&apos;ok&apos;</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;boot up&apos;</span>)
+  }
+}
+
+<span class="hljs-keyword">let</span> kernel = <span class="hljs-keyword">new</span> Kernel(<span class="hljs-string">&apos;silent&apos;</span>); <span class="hljs-comment">//starting init the kernel in mode silent</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`boot status is <span class="hljs-subst">${kernel.bootStatus}</span>`</span>);<span class="hljs-comment">//undefined</span>
+kernel.boot(); <span class="hljs-comment">//boot up</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`mode is <span class="hljs-subst">${kernel.mode}</span>`</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`boot status is <span class="hljs-subst">${kernel.bootStatus}</span>`</span>); <span class="hljs-comment">//boot status is ok</span>
+</code></pre>
+<h2 id="getters-%26-setters"><a class="header-anchor" href="#getters-%26-setters" aria-hidden="true">&#xA7;</a> Getters &amp; Setters</h2>
+<p>&#x423; &#x43A;&#x43B;&#x430;&#x441;&#x430;&#x445;, &#x44F;&#x43A; &#x456; &#x432; &#x437;&#x432;&#x438;&#x447;&#x430;&#x439;&#x43D;&#x438;&#x445; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;&#x445;, &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x443;&#x432;&#x430;&#x442;&#x438; &#x433;&#x435;&#x442;&#x442;&#x435;&#x440;&#x438; &#x456; &#x441;&#x435;&#x442;&#x442;&#x435;&#x440;&#x438; &#x447;&#x435;&#x440;&#x435;&#x437; get / set, &#x430; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; [...] &#x434;&#x43B;&#x44F; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x435;&#x439; &#x437; &#x43E;&#x431;&#x447;&#x438;&#x441;&#x43B;&#x44E;&#x432;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43C;&#x438; &#x456;&#x43C;&#x435;&#x43D;&#x430;&#x43C;&#x438;.</p>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;3:</strong> &#x421;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x433;&#x435;&#x442;&#x442;&#x435;&#x440;&#x430; &#x456; &#x441;&#x435;&#x442;&#x442;&#x435;&#x440;&#x430;.</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> </span>{
+  <span class="hljs-keyword">constructor</span>(firstName, lastName){
+    <span class="hljs-keyword">this</span>.firstName = firstName;
+    <span class="hljs-keyword">this</span>.lastName = lastName;
+  }
+
+  get fullName(){
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">&apos; &apos;</span> + <span class="hljs-keyword">this</span>.lastName;
+  }
+
+  set fullName(val) {
+    [<span class="hljs-keyword">this</span>.firstName, <span class="hljs-keyword">this</span>.lastName] = val.split(<span class="hljs-string">&apos; &apos;</span>);
+  }
+}
+
+<span class="hljs-keyword">let</span> empl = <span class="hljs-keyword">new</span> Employee(<span class="hljs-string">&apos;&#x412;&#x430;&#x441;&#x44F;&apos;</span>, <span class="hljs-string">&apos;&#x41F;&#x443;&#x43F;&#x43A;&#x456;&#x43D;&apos;</span>);
+<span class="hljs-built_in">console</span>.log(empl.fullName); <span class="hljs-comment">//&#x412;&#x430;&#x441;&#x44F; &#x41F;&#x443;&#x43F;&#x43A;&#x456;&#x43D;</span>
+empl.fullName = <span class="hljs-string">&apos;&#x406;&#x432;&#x430;&#x43D; &#x406;&#x432;&#x430;&#x43D;&#x43E;&#x432;&apos;</span>;
+<span class="hljs-built_in">console</span>.log(empl.fullName); <span class="hljs-comment">//&#x406;&#x432;&#x430;&#x43D; &#x406;&#x432;&#x430;&#x43D;&#x43E;&#x432;</span>
+</code></pre>
+<p>&#x417;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443;, &#x449;&#x43E; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x456;&#x43D;&#x456;&#x446;&#x456;&#x430;&#x43B;&#x456;&#x437;&#x430;&#x446;&#x456;&#x457; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432;, &#x44F;&#x43A;&#x456; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x456; &#x456;&#x437; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x433;&#x435;&#x442;&#x442;&#x435;&#x440;&#x456;&#x432; &#x456; &#x441;&#x435;&#x442;&#x442;&#x435;&#x440;&#x456;&#x432; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x435;&#x439;, &#x430; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x443; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432;.</p>
+<p><strong>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x2116;3:</strong> &#x414;&#x438;&#x43D;&#x430;&#x43C;&#x456;&#x447;&#x43D;&#x43E; &#x43E;&#x431;&#x447;&#x438;&#x441;&#x43B;&#x44E;&#x432;&#x430;&#x43D;&#x456; &#x456;&#x43C;&#x435;&#x43D;&#x430; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432;.</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Obj</span> </span>{
+  <span class="hljs-keyword">constructor</span>(method){
+    <span class="hljs-keyword">this</span>.method = method;
+  }
+
+  [<span class="hljs-string">&quot;hi&quot;</span>.toUpperCase()]() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;it works&apos;</span>);
+  }
+}
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> Obj(<span class="hljs-string">&apos;hi&apos;</span>);
+obj.HI();
+</code></pre>
+<h2 id="%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96-%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8"><a class="header-anchor" href="#%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96-%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8" aria-hidden="true">&#xA7;</a> &#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;</h2>
+<h3 id="%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96"><a class="header-anchor" href="#%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96" aria-hidden="true">&#xA7;</a> &#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;</h3>
+<p>&#x41A;&#x43E;&#x43B;&#x438; &#x43C;&#x438; &#x43E;&#x43F;&#x438;&#x441;&#x443;&#x454;&#x43C;&#x43E; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456; &#x432; &#x43A;&#x43B;&#x430;&#x441;&#x456;, &#x43C;&#x438; &#x432;&#x43A;&#x430;&#x437;&#x443;&#x454;&#x43C;&#x43E;, &#x447;&#x438; &#x431;&#x443;&#x434;&#x443;&#x442;&#x44C; &#x446;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x456; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437; &#x430;&#x431;&#x43E; &#x436; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x43E; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x432;&#x430;&#x442;&#x438; &#x457;&#x445; &#x43A;&#x43E;&#x43F;&#x456;&#x457; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x436;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;. &#x417;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43D;&#x43E;&#x432;&#x430; &#x43A;&#x43E;&#x43F;&#x456;&#x44F; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x436;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;.</p>
+<p>&#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x436; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456; - &#x456;&#x441;&#x43D;&#x443;&#x44E;&#x442;&#x44C; &#x432; &#x43E;&#x434;&#x43D;&#x43E;&#x43C;&#x443; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x456;, &#x456; &#x437;&#x432;&#x435;&#x440;&#x442;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x434;&#x43E; &#x43D;&#x438;&#x445; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x43E; &#x43F;&#x43E; &#x456;&#x43C;&#x435;&#x43D;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x443; (&#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x434;&#x43E; &#x441;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E;&#x457; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x437;&#x432;&#x435;&#x440;&#x442;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x43F;&#x43E; &#x456;&#x43C;&#x435;&#x43D;&#x456;).</p>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x441;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E;&#x457; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457; &#x432; JS:</p>
+<pre><code class="language-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+  <span class="hljs-keyword">static</span> get|set identifier(){...code}
+}
+</code></pre>
+<p>&#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;:</p>
+<pre><code class="language-js">
+</code></pre>
+<h3 id="%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8"><a class="header-anchor" href="#%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8" aria-hidden="true">&#xA7;</a> &#x421;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;</h3>
+<h2 id="%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F"><a class="header-anchor" href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" aria-hidden="true">&#xA7;</a> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;</h2>
+<h2 id="%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D0%BA%D0%B0"><a class="header-anchor" href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D0%BA%D0%B0" aria-hidden="true">&#xA7;</a> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x442;&#x430;&#x442;&#x438;&#x43A;&#x430;</h2>
+<h3 id="%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96"><a class="header-anchor" href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%96" aria-hidden="true">&#xA7;</a> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456;</h3>
+<h3 id="%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8"><a class="header-anchor" href="#%D0%BD%D0%B0%D1%81%D0%BB%D1%96%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%96-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8" aria-hidden="true">&#xA7;</a> &#x41D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x456; &#x441;&#x442;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;</h3>
+<h1 id="%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%94-%D0%B7%D0%B0%D0%B2%D0%B4%D0%B0%D0%BD%D0%BD%D1%8F"><a class="header-anchor" href="#%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%94-%D0%B7%D0%B0%D0%B2%D0%B4%D0%B0%D0%BD%D0%BD%D1%8F" aria-hidden="true">&#xA7;</a> &#x414;&#x43E;&#x43C;&#x430;&#x448;&#x43D;&#x454; &#x437;&#x430;&#x432;&#x434;&#x430;&#x43D;&#x43D;&#x44F;</h1>
+<p>&#x412;&#x456;&#x434;&#x43A;&#x440;&#x438;&#x439;&#x442;&#x435; <a href="https://repl.it/languages/nodejs">repl.it</a>. &#x412;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x442;&#x435; &#x437;&#x430;&#x432;&#x434;&#x430;&#x43D;&#x43D;&#x44F; &#x437;&#x433;&#x456;&#x434;&#x43D;&#x43E; &#x432;&#x430;&#x440;&#x456;&#x430;&#x442;&#x430;.</p>
+<h2 id="%D0%B2%D0%B0%D1%80%D1%96%D0%B0%D0%BD%D1%82%D0%B8"><a class="header-anchor" href="#%D0%B2%D0%B0%D1%80%D1%96%D0%B0%D0%BD%D1%82%D0%B8" aria-hidden="true">&#xA7;</a> &#x412;&#x430;&#x440;&#x456;&#x430;&#x43D;&#x442;&#x438;</h2>
+<ol>
+<li>&#x432;&#x456;&#x430;&#x456;&#x432;</li>
+<li>&#x444;&#x456;&#x432;&#x444;</li>
+<li>&#x444;&#x456;&#x432;</li>
+<li>&#x444;&#x432;&#x444;&#x456;</li>
+<li>&#x432;&#x456;&#x430;&#x432;</li>
+<li>&#x456;&#x432;&#x430;&#x456;</li>
+<li>&#x456;&#x432;&#x430;&#x456;&#x432;</li>
+<li>&#x432;&#x456;&#x430;&#x456;&#x432;</li>
+<li>&#x456;&#x432;&#x430;&#x456;</li>
+<li>&#x456;&#x432;&#x430;&#x456;&#x432;&#x430;</li>
+</ol>
+<h1 id="%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%96-%D0%B7%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F"><a class="header-anchor" href="#%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%96-%D0%B7%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F" aria-hidden="true">&#xA7;</a> &#x41A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44C;&#x43D;&#x456; &#x437;&#x430;&#x43F;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x44F;</h1>
+<ol>
+<li>&#x41F;&#x43E;&#x44F;&#x441;&#x43D;&#x456;&#x442;&#x44C; &#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x44C; &#x432;&#x435;&#x440;&#x441;&#x456;&#x43E;&#x43D;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; JavaScript.</li>
+<li>&#x42F;&#x43A;&#x430; &#x440;&#x456;&#x437;&#x43D;&#x438;&#x446;&#x44F; &#x43C;&#x456;&#x436; var &#x456; let?</li>
+<li>&#x429;&#x43E; &#x442;&#x430;&#x43A;&#x435; Arrow Function? &#x42F;&#x43A;&#x430; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x430;&#x433;&#x430; Arrow Function &#x43D;&#x430;&#x434; &#x442;&#x440;&#x430;&#x434;&#x438;&#x446;&#x456;&#x439;&#x43D;&#x43E;&#x44E; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x454;&#x44E; JavaScript?</li>
+<li>&#x41F;&#x43E;&#x44F;&#x441;&#x43D;&#x456;&#x442;&#x44C; &#x448;&#x430;&#x431;&#x43B;&#x43E;&#x43D;&#x43D;&#x456; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x430;&#x43B;&#x438;.</li>
+<li>&#x41F;&#x43E;&#x44F;&#x441;&#x43D;&#x456;&#x442;&#x44C; &#x434;&#x435;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x438;&#x437;&#x430;&#x446;&#x456;&#x44E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432; &#x456; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x456;&#x432; &#x432; JavaScript?</li>
+<li>&#x41F;&#x43E;&#x44F;&#x441;&#x43D;&#x456;&#x442;&#x44C; &#x43F;&#x440;&#x438;&#x43D;&#x446;&#x438;&#x43F; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x437;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43B;&#x43E;&#x432;&#x430; class.</li>
+</ol>
+</article>
+  </div>
+
+</body></html>
