@@ -17,10 +17,8 @@
 |MVC. Простий додаток Node.js з використанням патерна MVC.||
 |Cookies, session, auth||
 |Express.js||
-|Templates Engines||
 |Express.js: logger, auth||
 |Sequelize||
-|Sequelize: migrations(міграції), seed(сіди)||
 |Демо проект "Fiscalis"||
 |RESTful API||
 
