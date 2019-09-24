@@ -241,25 +241,76 @@ fs.writeFile('text.txt', text, (err) => {
 
 ## Синхронні функції
 
-```js
+Крім "нормальних" асинхронних модуль fs містить синхронні функції:
 
-```
+|Асинхронна|Синхронна|
+|-|-|
+|readFile()|readFileSync()|
+|writeFile()|writeFileSync()|
+|appendFile()|appendFileSync()|
+
+і т.д.
 
 # Модуль HTTP
 
-## Simple server
+Node.js має вбудований модуль під назвою HTTP, який дозволяє Node.js передавати дані через протокол передачі гіпертексту (HTTP).
 
-## Making responses
+Підключення модуля:
+
+```js
+var http = require('http'); 
+```
+
+## Вбудований сервер
+
+Модуль HTTP може створити сервер HTTP, який прослуховує порти сервера і повертає відповідь клієнту.
+
+```js
+http.createServer(function(req, res){
+	res.write('Hello world');
+	res.end();
+}).listen(8080);
+```
+
+Функція createServer приймає callback, який може бути і не анонімним:
+
+```js
+const handler = (req, res) => {
+	res.write('Hello worlds');
+	res.end();
+};
+
+http.createServer(handler).listen(8080);
+```
+
+Функція write може ввідавати HTML:
+
+```js
+res.write('<h1>Hello World</h1>');
+```
+
+## Фурмування відповіді
+
+
 
 ## Simple routing
 
+
+
 ## Return html file
+
+Для того, щоб повернути html - файл у відповідь достатньо його прочитати і повернути текстовий вміст:
+
+```js
+```
 
 ## nodemon
 
-## multyparty
+## Читання GET і POST - параметрів
 
 # Example project
+
+
 
 # Домашнє завдання
 
