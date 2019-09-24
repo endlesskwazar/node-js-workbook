@@ -192,8 +192,6 @@ fs.readFile('text.txt', (err, data) => {
 
 ![](../resources/img/3/6.png)
 
-### rename
-
 ### writefile
 
 Використовуйте метод fs.writeFile () для запису даних у файл. Якщо файл вже існує, він перезаписує вміст, інакше він створює новий файл і записує в нього дані.
@@ -203,11 +201,49 @@ fs.writeFile(filename, data[, options], callback)
 ```
 
 де:
+- filename: повний шлях та ім'я файлу у вигляді рядка.
+- data: вміст, який слід записати у файл.
+- options: Параметр параметрів може бути об'єктом або рядком, який може включати кодування, режим та прапор. Кодування за замовчуванням - utf8, а прапор за замовчуванням - "r".
+- callback: функція з двома параметрами err та fd. Це буде викликано, коли операція запису завершиться.
 
+```js
+var fs = require('fs');
+
+const text = `Some text`;
+
+fs.writeFile('text.txt', text, (err) => {
+  if(err){
+    console.log('Cant write');
+  }
+});
+```
+
+### appendFile
+
+Функція fs,appendFile() аналогічна writeFile(), крім того, що вона не перезаписує вміст фуйлу.
+
+### Основні функції fs
+
+|Функція|Пояснення|
+|-|-|
+|fs.readFile(fileName [,options], callback)|Читає наявний файл.|
+|fs.writeFile(filename, data[, options], callback)|Записується у файл. Якщо файл існує, тоді перезаписує вміст, інакше створюється новий файл.|
+|fs.open(path, flags[, mode], callback)|Відкриває файл для читання чи запису.|
+|fs.rename(oldPath, newPath, callback)|Перейменовує існуючий файл.|
+|fs.chown(path, uid, gid, callback)|Асинхронний chown.|
+|fs.stat(path, callback)|Повертає об'єкт fs.stat, який включає важливу статистику файлів.|
+|fs.rmdir(path, callback) |Перейменовує існуючий каталог.|
+|fs.mkdir(path[, mode], callback) |Створює новий каталог.|
+|fs.readdir(path, callback) |Читає вміст вказаного каталогу.|
+|fs.exists(path, callback) |Визначає, існує вказаний файл чи ні.|
+|fs.access(path[, mode], callback) |Тестує дозволи користувача на вказаний файл.|
+|fs.appendFile(file, data[, options], callback) |Додає новий вміст до наявного файлу.|
 
 ## Синхронні функції
 
+```js
 
+```
 
 # Модуль HTTP
 
