@@ -392,11 +392,25 @@ nodemon [your node app]
 Якщо локально, то:
 
 ```
-```
-
-або
 
 ```
+
+або створити скрипт в package.json
+
+```js
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon index.js"
+  },
+```
+
+```
+npm run start-dev
+```
+
+Або і взагалі без встановлення, використовуючи npx:
+```
+npx nodemon [app]
 ```
 
 ## Читання GET і POST - параметрів
@@ -404,6 +418,8 @@ nodemon [your node app]
 
 
 # Example project
+
+
 
 # Домашнє завдання
 
