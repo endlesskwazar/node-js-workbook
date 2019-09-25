@@ -289,28 +289,121 @@ http.createServer(handler).listen(8080);
 res.write('<h1>Hello World</h1>');
 ```
 
-## Фурмування відповіді
-
-
-
 ## Simple routing
 
+Усі URL-адреси для localhost передаються одній функції зворотного виклику. Для написання логіки маршрутизації використовуйте req.url і req.method:
 
+```js
+const http = require('http');
 
-## Return html file
+http.createServer((req, res) => {
+
+    console.log(`req.url == ${req.url} req.method == ${req.method}`);
+
+    if(req.url == '/about' && req.method == 'GET'){
+        res.write('Res from about page, method GET');
+        res.end();
+    }
+    else {
+        if (req.url == '/contact' && req.method == 'GET' ) {
+            res.write('Res from contact page, method GET');
+            res.end();
+        }
+    }
+
+    res.write('HTTP 404: Not Found');
+	  res.end();
+
+}).listen(8000);
+```
+
+## Повернення HTML - файлу у відповідь
 
 Для того, щоб повернути html - файл у відповідь достатньо його прочитати і повернути текстовий вміст:
 
+about.html:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+</head>
+<body>
+    <h1>This is about page</h1>
+</body>
+</html>
+```
+
 ```js
+const http = require('http');
+const fs = require('fs');
+
+http.createServer((req, res) => {
+
+    console.log(`req.url == ${req.url} req.method == ${req.method}`);
+
+    if(req.url == '/about' && req.method == 'GET'){
+        fs.readFile('about.html', 'utf-8', (err, data) => {
+            if (err) {
+                console.log(err);
+            }
+
+            res.write(data);
+            res.end();
+        });
+        
+    }
+    else {
+        if (req.url == '/contact' && req.method == 'GET' ) {
+            res.write('Res from contact page, method GET');
+            res.end();
+        }
+    }
+
+    res.write('HTTP 404: Not Found');
+    res.end();
+}).listen(8000);
 ```
 
 ## nodemon
 
+Якщо ми запустимо сервер через команду node і внеемо зміни в джерельний код, то ці зміни будуть застосовані лише, коли сервер буде перезавантажений. Це не дуже зручно при розробці, оскільки доводеться зупиняти і замускати сервер кожного разу, коли змінився джерельний код. Для зручності, при розробці можна використовувати nodemon.
+
+Для встановлення nodemon глобально можа:
+
+```
+npm install -g nodemon
+```
+
+або встановити як dev - залежність:
+
+```
+npm install --save-dev nodemon
+```
+
+Якщо nodemon був встановлений глобально запустити можна так:
+```
+nodemon [your node app]
+```
+
+Якщо локально, то:
+
+```
+```
+
+або
+
+```
+```
+
 ## Читання GET і POST - параметрів
 
+
+
 # Example project
-
-
 
 # Домашнє завдання
 
