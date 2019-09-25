@@ -392,7 +392,7 @@ nodemon [your node app]
 Якщо локально, то:
 
 ```
-
+node_modules/.bin/nodemon [app]
 ```
 
 або створити скрипт в package.json
@@ -415,11 +415,41 @@ npx nodemon [app]
 
 ## Читання GET і POST - параметрів
 
+Parse http requests with content-type multipart/form-data, also known as file uploads. 
 
+This is a Node.js module available through the npm registry. Installation is done using the npm install command: 
+
+```
+npm install --save multiparty
+```
+
+to include multiparty: 
+
+```
+var multiparty = require('multiparty');
+```
+
+```js
+if(req.url === '/files' && req.method === 'POST'){
+	let form = new multiparty.Form();
+	form.parse(req, (err, fields, files) => {
+		if(err){
+			res.write('Error parsing form');
+			res.end();
+			return;
+		}
+		res.write(`passed filename is ${fields['filename']}`);
+		res.end();
+	})
+	return;
+}
+```
 
 # Example project
 
+repo: https://github.com/endlesskwazar/node-js-examples
 
+branch: http
 
 # Домашнє завдання
 
