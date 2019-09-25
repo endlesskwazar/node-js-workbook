@@ -113,8 +113,8 @@ Content-Type: application/octet-stream
 Content-Length: 7
 Last-Modified: Sat, 08 Mar 2014 22:53:30 GMT
 Connection: keep-alive Accept-Ranges: bytes
-
-
+<br>
+<br>
 Wisdom 
 ```
 
@@ -345,19 +345,20 @@ http.createServer((req, res) => {
 Для того, щоб повернути html - файл у відповідь достатньо його прочитати і повернути текстовий вміст:
 
 about.html:
+
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
-</head>
-<body>
-    <h1>This is about page</h1>
-</body>
-</html>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;About&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is about page&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 ```
 
 
@@ -485,5 +486,3 @@ if(req.url === '/files' && req.method === 'POST'){
 repo: https://github.com/endlesskwazar/node-js-examples
 
 branch: http
-
-
