@@ -46,6 +46,17 @@ console.log("Example app listening at http://%s:%s", host, port)
 ![](../resources/img/4/1.jpg)
 
 
+### Express. Use
+
+```js
+app.get('/users/:userId/books/:bookId', function (req, res) {
+  //req.params.userId
+  //req.params.bookId
+  res.send(req.params);
+})
+```
+
+
 
 ## Express. Modular routes
 
