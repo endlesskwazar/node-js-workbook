@@ -306,6 +306,33 @@ npx sequelize-cli init
 **Потім налаштуємо строку підключення**:
 
 ```json
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "sq_demo_2",
+    "host": "127.0.0.1",
+    "dialect": "mariadb",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "sq_demo_2",
+    "host": "127.0.0.1",
+    "dialect": "mariadb",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "sq_demo_2",
+    "host": "127.0.0.1",
+    "dialect": "mariadb",
+    "operatorsAliases": false
+  }
+}
+
 ```
 
 **Створимо модель і міграцію**
@@ -365,20 +392,177 @@ module.exports = (sequelize, DataTypes) => {
 
 **Запустимо міграції**
 
-> Зверніть увагу, на те, що міграції не створюють саму базу даних, а лише таблиці і їх поля. Ми можемо створити базу даних вручну або скориставшить командою db:create
+> Зверніть увагу, на те, що міграції не створюють саму базу даних, а лише таблиці і їх поля. Ми можемо створити базу даних вручну або скориставшить командою db:create. Деякі діалекти як mariadb не підтримують дану команду.
 
 ```bash
 npx sequelize-cli db:migrate
 ```
 
+![](../resources/img/5/5.png)
+
 Подивимося на згенеровані таблиці:
+
+![](../resources/img/5/6.png)
 
 
 
 **Тепер, уявімо, що нам потрібно додати поле age до моделі Student**:
 
+Створимо пусту міграцію:
+
+```bash
+npx sequelize-cli migration:generate --name students_add_age_field
+```
+
+![](../resources/img/5/7.png)
+
+Ця команда згенерує пустий файл міграції:
+
+```js
+'use strict';
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    /*
+      Add altering commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.createTable('users', { id: Sequelize.INTEGER });
+    */
+  },
+
+  down: (queryInterface, Sequelize) => {
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.dropTable('users');
+    */
+  }
+};
+```
+
+Додамо поле age до вже існуючої таблиці Students:
+
+```js
+'use strict';
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.addColumn(
+      'Students',
+      'age',
+     Sequelize.INTEGER
+    );
+  },
+
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.removeColumn(
+      'Students',
+      'age',
+     Sequelize.INTEGER
+    );
+  }
+};
+```
+
+Запустимо міграції:
+
+```bash
+npx sequelize-cli db:migrate
+```
+
+![](../resources/img/5/8.png)
+
+І подивимося тепер на структуру таблиці Students:
+
+![](../resources/img/5/9.png)
+
+**Повний код додатку** можна знайти на [node-js-examples](https://github.com/endlesskwazar/node-js-examples) гілка sq_demo_2
 
 # CRUD
+
+**CRUD** — (англ. create read update delete) 4 базові функції управління даними «створення, зчитування, зміна і видалення».
+
+**Стосовно бази даних**.
+
+|Операція|SQL|
+|-|-|
+|Create|Insert|
+|Read|Select|
+|Update|Update|
+|Delete|Delete|
+
+В якості першопочаткового проекту використаємо [node-js-examples](https://github.com/endlesskwazar/node-js-examples) гілка sq_demo_2
+
+## Create
+
+Для створення запису можна скористатися функцією create () - це проміс, який приймає об'єкт, і в якості resolve повертає створений об'єкт із бази даних:
+
+```js
+const {Student} = require('./models');
+
+Student.create({
+    'name': 'Ivan',
+    'age': 33
+})
+.then(created => {
+    console.log(`Id of created student ${created.id}`)
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/10.png)
+
+## Read
+
+Під читанням ми можемо отримати список всіх студентів, одного студента по id і кастомний пошук:
+
+### findByPk
+
+Функція findByPk дозволяє знайти один екземпляр студента використовуючи поле id:
+
+```js
+const {Student} = require('./models');
+
+Student.findByPk(1)
+.then(student => {
+    console.log(`Student with id 1 has name: ${student.name}`)
+})
+.catch(err => {
+    console.log(err);
+})
+```
+
+![](../resources/img/5/11.png)
+
+### findAll
+
+Функція findAll дозволяє отримати всі записи в таблиці:
+
+```js
+const {Student} = require('./models');
+
+Student.findAll()
+.then(students => {
+    students.forEach(student => {
+        console.log(`Student id:${student.id} name:${student.name}`);
+    });
+})
+.catch(err => {
+    console.log(err);
+})
+```
+
+![](../resources/img/5/12.png)
+
+## Update
+
+## Delete
 
 # Relations
 
