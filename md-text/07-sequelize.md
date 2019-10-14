@@ -480,6 +480,76 @@ npx sequelize-cli db:migrate
 
 ![](../resources/img/5/9.png)
 
+**Потрібно, не забути змінити саму модель.** Так-як саме вона відповідає за передтоврення об'єктів в реляційну схему.
+
+```js
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Student = sequelize.define('Student', {
+    name: DataTypes.STRING,
+    age: DataTypes.INTEGER
+  }, {});
+  Student.associate = function(models) {
+    // associations can be defined here
+  };
+  return Student;
+};
+```
+
+**Тепер стовримо seed для моделі Student.** Створимо файл-seed виконавши команду:
+
+```bash
+npx sequelize-cli seed:generate --name students
+```
+
+![](../resources/img/5/13.png)
+
+І модифікуємо створений файл seeders/20191014091209-students.js:
+
+```js
+'use strict';
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert('People', [{
+      name: 'Ivan',
+      age: 23,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Oleg',
+      age: 22,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }], {});
+  },
+
+  down: (queryInterface, Sequelize) => {
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.bulkDelete('People', null, {});
+    */
+  }
+};
+```
+
+Запустимо seeder:
+
+```bash
+npx sequelize-cli db:seed:all
+```
+
+![](../resources/img/5/14.png)
+
+і подивимося чи присутні дані в таблиці:
+
+![](../resources/img/5/15.png)
+
+
 **Повний код додатку** можна знайти на [node-js-examples](https://github.com/endlesskwazar/node-js-examples) гілка sq_demo_2
 
 # CRUD
@@ -505,8 +575,8 @@ npx sequelize-cli db:migrate
 const {Student} = require('./models');
 
 Student.create({
-    'name': 'Ivan',
-    'age': 33
+    'name': 'Viktor',
+    'age': 25
 })
 .then(created => {
     console.log(`Id of created student ${created.id}`)
@@ -550,19 +620,188 @@ const {Student} = require('./models');
 Student.findAll()
 .then(students => {
     students.forEach(student => {
-        console.log(`Student id:${student.id} name:${student.name}`);
+        console.log(`Student id:${student.id} name:${student.name} age:${student.age}`);
     });
 })
 .catch(err => {
     console.log(err);
-})
+});
 ```
 
 ![](../resources/img/5/12.png)
 
+Функція findAll() в якості аргумента може прийняти об'єкт із частковими властивостями для пошуку:
+
+```js
+const {Student} = require('./models');
+
+Student.findAll({
+    where: {
+        name: 'Ivan'
+    }
+})
+.then(students => {
+    students.forEach(student => {
+        console.log(`Student id:${student.id} name:${student.name} age:${student.age}`);
+    });
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/16.png)
+
+Також можна використовувати Op для логічних операторів:
+
+```js
+const {Student} = require('./models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
+Student.findAll({
+    where: {
+        name: {
+         [Op.or]: ['Ivan', 'Oleg']
+        }
+    }
+})
+.then(students => {
+    students.forEach(student => {
+        console.log(`Student id:${student.id} name:${student.name} age:${student.age}`);
+    });
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/17.png)
+
+Повний список Op:
+
+```js
+Project.findAll({
+  where: {
+    id: {
+      [Op.and]: {a: 5},           // AND (a = 5)
+      [Op.or]: [{a: 5}, {a: 6}],  // (a = 5 OR a = 6)
+      [Op.gt]: 6,                // id > 6
+      [Op.gte]: 6,               // id >= 6
+      [Op.lt]: 10,               // id < 10
+      [Op.lte]: 10,              // id <= 10
+      [Op.ne]: 20,               // id != 20
+      [Op.between]: [6, 10],     // BETWEEN 6 AND 10
+      [Op.notBetween]: [11, 15], // NOT BETWEEN 11 AND 15
+      [Op.in]: [1, 2],           // IN [1, 2]
+      [Op.notIn]: [1, 2],        // NOT IN [1, 2]
+      [Op.like]: '%hat',         // LIKE '%hat'
+      [Op.notLike]: '%hat',       // NOT LIKE '%hat'
+      [Op.iLike]: '%hat',         // ILIKE '%hat' (case insensitive)  (PG only)
+      [Op.notILike]: '%hat',      // NOT ILIKE '%hat'  (PG only)
+      [Op.overlap]: [1, 2],       // && [1, 2] (PG array overlap operator)
+      [Op.contains]: [1, 2],      // @> [1, 2] (PG array contains operator)
+      [Op.contained]: [1, 2],     // <@ [1, 2] (PG array contained by operator)
+      [Op.any]: [2,3]            // ANY ARRAY[2, 3]::INTEGER (PG only)
+    },
+    status: {
+      [Op.not]: false           // status NOT FALSE
+    }
+  }
+})
+```
+
+## FindOne
+
+функція findOne() аналогічна до findAll() але завжди повертає один результат:
+
+```js
+const {Student} = require('./models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
+Student.findOne({
+    where: {
+        name: {
+         [Op.or]: ['Ivan', 'Oleg']
+        }
+    }
+})
+.then(student => {
+    console.log(`Student name:${student.name}`);
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/18.png)
+
+
 ## Update
 
+Функція update() може виконуватися лише на екземплярах моделі, тому перед тим як оновити дані, нам потрібно отримати запис із БД:
+
+```js
+const {Student} = require('./models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
+Student.findOne({
+    where: {
+        name: {
+         [Op.or]: ['Ivan', 'Oleg']
+        }
+    }
+})
+.then(student => {
+    student.update({
+        name: 'notIvan'
+    })
+    .then(updated => {
+        console.log(`Updated student name:${updated.name}`);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/19.png)
+
+![](../resources/img/5/20.png)
+
 ## Delete
+
+Для видалення запису використовується функція destroy(). Як і функція update вона повинна викликати на екземплярі моделі:
+
+```js
+const {Student} = require('./models');
+
+Student.findOne({
+    where: {
+        name: 'notIvan'
+    }
+})
+.then(student => {
+    student.destroy()
+    .then(destroyed => {
+        console.log(`Updated student name:${destroyed.name}`);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/21.png)
+
 
 # Relations
 
