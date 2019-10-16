@@ -805,7 +805,156 @@ Student.findOne({
 
 # Relations
 
+Спочатку почнемо з базового поняття, source і target. Припустимо, ви намагаєтеся додати зв'язок між двома моделями. Тут ми додаємо асоціацію hasOne між User та Project.
+
+```js
+class User extends Model {}
+User.init({
+  name: Sequelize.STRING,
+  email: Sequelize.STRING
+}, {
+  sequelize,
+  modelName: 'user'
+});
+
+class Project extends Model {}
+Project.init({
+  name: Sequelize.STRING
+}, {
+  sequelize,
+  modelName: 'project'
+});
+
+User.hasOne(Project);
+```
+
+User модель (модель, на якій функція викликається) є source. Модель Project (модель, яка передається як аргумент) є target.
+
 ## One to One
+
+Створимо 2-і моделі:
+
+```js
+Customer = sequelize.define('customer', {
+  /* attributes */
+});
+ 
+Address = sequelize.define('address', {
+  /* attributes */
+});
+```
+
+Для створення зв'язку один-до0одного в sequelize існує два способи:
+
+- belongsTo
+
+```js
+Address.belongsTo(Customer);
+```
+
+belongsTo створить зовнішній ключ в source
+
+- hasOne
+
+```js
+Customer.hasOne(Address);
+```
+
+hasOne створить первинний ключ в target
+
+При використанні belongsTo зовнішній ключ буде згенерований як ім'я target моделі + первинний ключ. Sequelize предоставляє foreignKey параметр, щоб перезаписати цю поведінку.
+
+Виконаємо настуний код:
+
+```js
+const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('mariadb://root@localhost:3306/sq_1_1');
+
+
+Customer = sequelize.define('customer', {
+    uuid: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV1,
+        primaryKey: true
+    },
+    name: {
+        type: DataTypes.STRING
+    }
+});
+
+Address = sequelize.define('address', {
+    city: {
+        type: DataTypes.STRING
+    }
+});
+
+Customer.hasOne(Address, { foreignKey: 'fk_customerid', targetKey: 'uuid' });
+sequelize.sync();
+```
+
+sync згенерує настпний sql:
+
+```
+Executing (default): CREATE TABLE IF NOT EXISTS `customers` (`uuid` CHAR(36) BINARY , `name` VARCHAR(255), `createdAt
+` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`uuid`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `customers`
+Executing (default): CREATE TABLE IF NOT EXISTS `addresses` (`id` INTEGER NOT NULL auto_increment , `city` VARCHAR(25
+5), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `fk_customerid` CHAR(36) BINARY, PRIMARY KEY (`id`)
+, FOREIGN KEY (`fk_customerid`) REFERENCES `customers` (`uuid`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `addresses`
+```
+
+Тепер для створення зв'язаних даних:
+
+```js
+Customer.create({
+    name: 'Alex'
+})
+.then(customer => {
+    Address.create({
+        city: 'Kyiv'
+    })
+    .then(adress => {
+        customer.setAddress(adress);
+    })
+})
+```
+
+Або створення із використанням async/await:
+
+```js
+async function createData(){
+    const customer = await Customer.create({name: 'John'});
+    const adress = await Address.create({city: 'Lviv'});
+    customer.setAddress(adress);
+}
+
+createData();
+```
+
+![](../resources/img/5/22.png)
+
+Щоб отримати Customer із зв'язаною моделлю Adress:
+
+```js
+Customer.findAll({
+    include: [{
+        model: Address,
+        where: { fk_customerid: Sequelize.col('customer.uuid') }
+    }]
+})
+    .then(customers => {
+        customers.forEach(customer => {
+            console.log(`Customer with name ${customer.name} live in ${customer.address.city}`);
+        })
+    })
+    .catch(err => {
+        console.log(err);
+    });
+```
+
+![](../resources/img/5/23.png)
+
 
 ## One to Many
 
