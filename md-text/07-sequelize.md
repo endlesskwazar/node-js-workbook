@@ -958,7 +958,164 @@ Customer.findAll({
 
 ## One to Many
 
+Створимо дві моделі(кораблі і члени екіпажа). По задумці, один корабель може мати багато членів екіпажа. О один член екіпажа належить до одного корябля, тобто зв'язок один до одного. Ось моделі:
 
+```js
+const Ship = conn.define('ship', {
+    name: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    purpose: {
+      type: Sequelize.STRING,
+      allowNull: false
+    }
+  });
+  
+const Member = conn.define('member', {
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  species: {
+    type: Sequelize.STRING,
+    allowNull: false
+  }
+});
+```
+
+функції, які використовуються для зв'язку один корабель - багато членів екіпажа(hasMany); один член екіпажа - один корабель(belongsTo):
+
+```js
+Member.belongsTo(Ship);
+Ship.hasMany(Member);
+```
+
+Додамо функцію sync і подивимося на згенеровані таблиці:
+
+```js
+const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('mariadb://root@localhost:3306/sq_1_n');
+
+const Ship = sequelize.define('ship', {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    purpose: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
+  });
+  
+const Member = sequelize.define('member', {
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  species: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
+});
+
+
+Member.belongsTo(Ship);
+Ship.hasMany(Member);
+
+sequelize.sync();
+```
+
+![](../resources/img/5/24.png)
+
+Створимо корабель і декілька членів екіпажа:
+
+```js
+async function createData(){
+    member1 = await Member.create({name: 'Alex', species: 'Human'});
+    member2 = await Member.create({name: 'John', species: 'Human'});
+    ship = await Ship.create({name: 'Victoria', purpose: 'Enterprise'});
+    await ship.setMembers([member1, member2]);
+}
+```
+
+![](../resources/img/5/25.png)
+
+А тепер отримаємо створені дані:
+
+```js
+Ship.findOne({
+    where: {
+        name: 'Victoria'
+    }
+})
+.then(ship => {
+    console.log(`Members for ship ${ship.name}`);
+    return ship.getMembers();
+})
+.then(members => {
+    members.forEach(member => {
+        console.log(member.name);
+    });
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+![](../resources/img/5/26.png)
+
+або:
+
+```js
+Ship.findOne({
+    where: {
+        name: 'Victoria'
+    },
+    include: [Member]
+})
+.then(ship => {
+    console.log(`Members for ship ${ship.name}`);
+    ship.members.forEach(member => {
+        console.log(member.name);
+    });
+})
+.catch(err => {
+    console.log(err);
+});
+```
+
+Для видалення асоціації можна передати лише тих членів екіпажа, яких необхідно залишити:
+
+```js
+project.setTasks([task2]).then(associatedTasks => {
+  // you will get task2 only
+})
+
+// remove 'em all
+project.setTasks([]).then(associatedTasks => {
+  // you will get an empty array
+})
+
+// or remove 'em more directly
+project.removeTask(task1).then(() => {
+  // it's gone
+})
+
+// and add 'em again
+project.addTask(task1).then(() => {
+  // it's back again
+})
+```
+
+або навпаки видалення через іншу модель:
+
+```js
+// project is associated with task1 and task2
+task2.setProject(null).then(() => {
+  // and it's gone
+})
+```
 
 ## Many to Many
 
