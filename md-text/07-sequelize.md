@@ -1119,6 +1119,119 @@ task2.setProject(null).then(() => {
 
 ## Many to Many
 
+Щоб зробити зв'язок багато-до-багатьох потрібно створити модель проміжної таблиці і використати функцію belongsToMany.
+
+```js
+const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('mariadb://root@localhost:3306/sq_n_m');
+
+var Todo = sequelize.define('todo', {
+	description: {
+		type: Sequelize.STRING,
+		allowNull: false,
+		validate: {
+			len: [1, 250]
+		}
+	},
+	completed: {
+		type: Sequelize.BOOLEAN,
+		allowNull: false,
+		defaultValue: false
+	}
+});
+
+var UserTodo = sequelize.define('userTodo', {
+	// No attributes required, just the userId and todoId
+	// You could add something else here like a favorites boolean field so a user
+	//   can mark a todo as "favorited".  
+});
+
+var User = sequelize.define('user', {
+	email: Sequelize.STRING
+});
+
+User.belongsToMany(Todo, { through: UserTodo });
+Todo.belongsToMany(User, { through: UserTodo });
+
+sequelize.sync();
+```
+
+![](../resources/img/5/27.png)
+
+Створити зв'язані дані:
+
+```js
+User.create({email: 'endlesskwazar@gmail.com'})
+.then(user => {
+  Todo.create({description: 'do something'})
+  .then(todo => {
+    user.addTodos([todo])
+  });
+});
+```
+
+![](../resources/img/5/28.png)
+
+Отримати зв'язані дані:
+
+```js
+User.findOne({
+  where: {
+    email: 'endlesskwazar@gmail.com'
+  },
+  include: [Todo]
+})
+.then(user => {
+  console.log(`Todos for user ${user.email}`);
+  user.todos.forEach(todo => {
+    console.log(`${todo.description}`);
+  });
+})
+.catch(err => {
+  console.log(err);
+});
+```
+
+![](../resources/img/5/29.png)
+
+## Створення зв'язків в згенерованих моделях sequelize-cli
+
+Якщо ми подивимося на приклад із міграціями де моделі були створені за допомогою sequelize-cli вони мають наступну структуру:
+
+```js
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Student = sequelize.define('Student', {
+    name: DataTypes.STRING
+  }, {});
+  Student.associate = function(models) {
+    // associations can be defined here
+  };
+  return Student;
+};
+```
+
+Зв'язок можна описати у функції associate:
+
+```js
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Student = sequelize.define('Student', {
+    name: DataTypes.STRING
+  }, {});
+  Student.associate = function(models) {
+    Student.hasOne(models.Card);
+  };
+  return Student;
+};
+```
+
+## Висновок по зв'язкам в sequelize
+
+- 1:1 - Parent.hasOne(Child) Child.belongsTo(Parent)
+- 1:N - Parent.hasMany(Child) Child.belongsTo(Parent)
+- N:M - Parent.belongsToMany(Child, {through: 'Parent_Child', foreignKey: 'Parent_rowId'}) Child.belongsToMany(Parent, {through: 'Parent_Child', foreignKey: 'Child_rowId'})
+
 # Домашнє завдання
 
 Використовуючи migrations і seeds розробіть проект на основі двох сутностей із Вашої теми по ОБДЗ. Створыть index.js, який демонструє CRUD - операції.
