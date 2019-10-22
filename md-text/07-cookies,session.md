@@ -126,6 +126,9 @@ app.listen('3000');
 
 ## Express auth using password encryption and database
 
+- [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- branch - sq-auth
+
 # Домашнє завдання
 
 # Контрольні запитання
