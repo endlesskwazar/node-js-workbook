@@ -418,7 +418,27 @@ setInterval(function() {
 
 # Розгортання Node.js - проекту на Heroku
 
+Для початку зайдемо на [Heroku](https://www.heroku.com) і зареєструємося. Після успішної реєстрації і авторизації нам буде доступний dashboard:
 
+![](../resources/img/8/1.png)
+
+Створимо новий застосунок:
+
+![](../resources/img/8/2.png)
+
+Перевірити роботоспособність створеного додатку можна перейшовши на [your-app-name].herokuapp.com
+
+![](../resources/img/8/3.png)
+
+Повернімося в dashboard і на вкладці addons додаймо postgresql:
+
+![](../resources/img/8/4.png)
+
+Для того, щоб дізнатися строку підключення до БД, потрібно клікнути в деталях heroku-postgresql вибрати settings/view credentioals:
+
+![](../resources/img/8/5.png)
+
+**Запом'ятаймо, де цю інформацію можна знайти вона нам знадобиться.**
 
 # Домашнє завдання
 
