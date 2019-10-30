@@ -440,6 +440,62 @@ setInterval(function() {
 
 **Запом'ятаймо, де цю інформацію можна знайти вона нам знадобиться.**
 
+Задеплоїти проект на heroku можна 3-мя способами:
+
+1. Heroku-CLI
+2. GitHub
+3. Container REgistry
+
+Ми використаємо 3-й спосіб. Для цього на потрібно завантажити [heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
+
+Перевіримо правильність установки можна виконавши команду:
+
+```bash
+heroku
+```
+
+![](../resources/img/8/7.png)
+
+В якості проекту, який ми будемо деплоїти використаємо:
+
+- [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- branch: books-deploy
+
+Склонуємо репозиторій і видалимо прихованоу директорію .git:
+
+![](../resources/img/8/8.png)
+
+Змінимо конфігурацію підключення до БД, використовуючи інформацію про heroku - postgresql. Вона виглядатимо подібно цій:
+
+```json
+"production": {
+    "username": "vtdxnldyfrruyd",
+    "password": "0e34c1eceb4ca42921e1a35515f5476bbd5372d326cf635595b12fe8796256b4",
+    "database": "dc97c549hqkft2",
+    "host": "ec2-46-137-159-254.eu-west-1.compute.amazonaws.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+```
+
+Відкриємо термінал з-під рутової директорії проекту і виконайте:
+
+```bash
+heroku login
+git init
+heroku git:remote -a [your-app-name]
+git add .
+git commit -am "make it better"
+git push heroku master
+```
+
+Для того, щоб подивитися логи виконайте команду:
+
+```bash
+heroku logs --tail
+```
+
 # Домашнє завдання
 
 1. Протестуйте розроблений проект на лабораторній роботі №7.
