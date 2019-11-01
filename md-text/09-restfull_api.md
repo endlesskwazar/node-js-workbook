@@ -173,11 +173,41 @@ HTTP визначає різні коди відповідей для вказі
 - 422 Unprocessable Entity - використовується для перевірки помилок
 - 429 Too Many Requests - коли запит відхиляється через обмеження швидкості
 
+Приклад хороших RESTfull - api [GitHub Developer](https://developer.github.com/v3/)
+
 # Простий приклад RESTfull на express
+
+- Репозиторій - [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- Гілка - simple-message-api
+
+## Ручне тестування додатку
+
+Оскільки, ми не використовуємо handlebars або інший renderer подивитися результат роботи застосунку в браузері неможна. Для цього нам знадобляться один із інструментів: 
+[Postman](https://www.getpostman.com/) або [Insomnia](https://insomnia.rest/).
+
+**Додавання повідомлення**
+
+![](../resources/img/9/6.png)
+
+![](../resources/img/9/7.png)
+
+**Отримання списку всіх повідомлень**
+
+![](../resources/img/9/8.png)
+
+**Отримання одного повідомлення**
+
+![](../resources/img/9/9.png)
+
+**Модифікація повідомлення**
+
+![](../resources/img/9/10.png)
 
 # JWT
 
 # Приклад RESTfull - веб сервіса
+
+# Документація endpoints
 
 # Домашнє завдання
 
