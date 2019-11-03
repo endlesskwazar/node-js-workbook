@@ -244,14 +244,53 @@ HTTP визначає різні коди відповідей для вказі
 
 ![](../resources/img/9/14.png)
 
-# Приклад RESTfull - веб сервіса і напишемо функціональні тести
+# Приклад RESTfull
 
 Поєднаємо два вище наведені додатки:
 
 - Репозиторій - 
 - Гілка - 
 
-# Документація endpoints
+# Документація endpoints(swagger)
+
+
+**Swagger** - це програмне забезпечення з відкритим кодом, що підтримується великою екосистемою інструментів, яка допомагає розробникам розробляти, створювати, документувати та споживати RESTful веб-сервіси.
+
+Для express існує пакет **swagger-ui-express**:
+
+```bash
+npm install swagger-ui-express
+```
+
+```js
+const express = require('express');
+const app = express();
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+ 
+var options = {
+  swaggerOptions: {
+    validatorUrl: null
+  }
+};
+ 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
+```
+
+Сама документація описується по специфікації OpenApi у форматах json або yaml.
+
+OpenApi складається із:
+
+|Поле|Тип|Пояснення|
+|-|-|-|
+|openapi|string|**REQUIRED** Семантична версія OpenApi, яка використовується.|
+|info|Info Object|**REQUIRED**  Метадата. Заголовок додатка, опис, контакти, ліцензія, версія.|
+|servers|||
+||||
+||||
+||||
+
+Подивитися специфікацію можнв на [swagger.io](https://swagger.io/specification/)
 
 # Домашнє завдання
 
