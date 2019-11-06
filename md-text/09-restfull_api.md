@@ -248,8 +248,36 @@ HTTP визначає різні коди відповідей для вказі
 
 Поєднаємо два вище наведені додатки:
 
-- Репозиторій - 
-- Гілка - 
+- Репозиторій - [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- Гілка - message-api
+
+**Зареєструємо користувача**
+
+![](../resources/img/9/16.png)
+
+**Отримаємо токен**
+
+![](../resources/img/9/17.png)
+
+**Створимо декілька повідомлень**
+
+![](../resources/img/9/18.png)
+
+![](../resources/img/9/19.png)
+
+**Отримаємо список всіх повідомлень**
+
+![](../resources/img/9/20.png)
+
+**Видалимо повідомлення**
+
+![](../resources/img/9/21.png)
+
+**Отримаємо список користувачів**
+
+![](../resources/img/9/22.png)
+
+![](../resources/img/9/23.png)
 
 # Документація endpoints(swagger)
 
@@ -285,13 +313,20 @@ OpenApi складається із:
 |-|-|-|
 |openapi|string|**REQUIRED** Семантична версія OpenApi, яка використовується.|
 |info|Info Object|**REQUIRED**  Метадата. Заголовок додатка, опис, контакти, ліцензія, версія.|
-|servers|||
-||||
-||||
-||||
+|servers|Server Object|Масив об’єктів сервера, які надають інформацію про підключення до цільового сервера.|
+|paths|Paths Object|**REQUIRED** Доступні шляхи та операції для API.|
+|security|Security Requirement Object]|Декларація, які механізми захисту можна використовувати в API.|
+|externalDocs|External Documentation Object|Додаткова зовнішня документація.|
 
-Подивитися специфікацію можнв на [swagger.io](https://swagger.io/specification/)
+Подивитися специфікацію можна на [swagger.io](https://swagger.io/specification/)
 
 # Домашнє завдання
 
 # Контрольні запитання
+
+1. sdfsd
+2. sdfsdf
+3. werewr
+4. wrewer
+5. werwer
+6. werwer
