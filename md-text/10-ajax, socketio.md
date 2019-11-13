@@ -139,7 +139,8 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 # Приклад клієнта
 
-
+- Репозиторій - [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- Гілка - message-fetch
 
 # Web Socket
 
@@ -157,9 +158,12 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 ## Приклад
 
+- Репозиторій - [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- Гілка - message-ws
+
 # Домашнє завдання
 
-Напишіть користувацький інтерфейс для додатку, який було розроблено на лабораторній роботі №9, використовуючи Fetch API.
+Доробіть до message-ws функціонал реєстрації і видалення повідомлення. Також доробіть перевірку правильності введення даних згідно із серверним додатком.
 
 # Контрольні запитання
 
