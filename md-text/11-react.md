@@ -411,6 +411,51 @@ class Message extends React.Component {
 
 1. **Груповання по функціональності або маршруту**
 
+Один з популярних підходів - це розміщення файлів CSS, JS і тестів в папках, згрупованих за функціональністю або маршруту.
+
+```
+common/
+  Avatar.js
+  Avatar.css
+  APIUtils.js
+  APIUtils.test.js
+feed/
+  index.js
+  Feed.js
+  Feed.css
+  FeedStory.js
+  FeedStory.test.js
+  FeedAPI.js
+profile/
+  index.js
+  Profile.js
+  ProfileHeader.js
+  ProfileHeader.css
+  ProfileAPI.js
+```
+
+2. Груповання по типу файлу
+
+Іншим популярним способом структурування проектів є угруповання схожих файлів, наприклад:
+
+```
+api/
+  APIUtils.js
+  APIUtils.test.js
+  ProfileAPI.js
+  UserAPI.js
+components/
+  Avatar.js
+  Avatar.css
+  Feed.js
+  Feed.css
+  FeedStory.js
+  FeedStory.test.js
+  Profile.js
+  ProfileHeader.js
+  ProfileHeader.css
+```
+
 # Приклад клієнта
 
 # Домашнє завдання
@@ -419,8 +464,8 @@ class Message extends React.Component {
 
 # Контрольні запитання
 
-1. іваів
-2. іваів
-3. іваіва
-4. іваіва
-5. вапвап
+1. Що таке React?
+2. Поясніть концепцію компонентів.
+3. Яка різниця між функціональними і компонентами, які базуються на класах?
+4. Що таке props і state?
+5. Перелічіть методи життєвого циклу react - компонента.
