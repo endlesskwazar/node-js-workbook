@@ -1,6 +1,6 @@
 # React
 
-#{toc}
+${toc}
 
 # Що таке react
 
@@ -254,7 +254,7 @@ this.setState({comment: 'Hello'});
 
 Кожен компонент має кілька «методів життєвого циклу». Перевизначення такого методу дозволяє виконувати код на конкретному етапі цього процесу. Зрозуміти життєвий цикл можна подивившись на дану [діаграму](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/).
 
-|Функція|По/снення|
+|Функція|Пояснення|
 |-|-|
 |componentWillMount|виконується до рендеринга, як на сервері, так і на стороні клієнта.|
 |componentDidMount|виконується після першої візуалізації тільки на стороні клієнта.|
@@ -457,6 +457,9 @@ components/
 ```
 
 # Приклад клієнта
+
+- repo - [node-js-examples](https://github.com/endlesskwazar/node-js-examples)
+- branch - react-simple
 
 # Домашнє завдання
 
