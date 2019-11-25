@@ -29,7 +29,7 @@
 1. git clone https://github.com/endlesskwazar/node-js-workbook.git
 2. cd node-js-workbook
 3. npm i
-4. npm run buid
+4. npm run build
 
 Збудований проект буде доступний в директорії dist. Матеріали знаходяться в директорії workbook. Презентації - presentations.
 
