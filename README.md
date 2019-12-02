@@ -44,6 +44,7 @@
 - [ ] Домашнє завдання для express
 - [ ] До лекції express додати пояснення MVC
 - [ ] Презентація для sequelize
+- [ ] Переробити приклади sequelize на sqlite замість mariadb
 - [ ] Презентація для cookie, session
 - [ ] Презентація для тестів і heroku
 - [ ] Видалити лекцію node_mvc_example
