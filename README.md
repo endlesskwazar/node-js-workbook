@@ -21,8 +21,6 @@
 |08-testing,heroku_deploy|||
 |09-restfull_api|||
 |10-ajax, socketio|||
-|11-react|||
-|12-react,fetch_data,react_router|||
 
 # Будування
 
