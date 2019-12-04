@@ -511,7 +511,7 @@ npx sequelize-cli seed:generate --name students
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('People', [{
+    return queryInterface.bulkInsert('Students', [{
       name: 'Ivan',
       age: 23,
       createdAt: new Date(),
